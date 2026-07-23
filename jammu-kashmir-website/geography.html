@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Geography — Jammu &amp; Kashmir Information Portal</title>
+  <meta name="description" content="Comprehensive physical geography of Jammu &amp; Kashmir — Kashmir Valley, Jammu region, Himalayan ranges, glaciers, rivers, alpine passes, lakes, caves, springs, geomorphology, biodiversity, and physiographic zones.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="load_data.js" defer></script>
+  <script src="js/audio_pronounce.js" defer></script>
+  <script src="js/interactive_widgets.js" defer></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-bar__inner">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><span class="sep">›</span></li>
+        <li><span class="current">Geography</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__badge">🗺️ Comprehensive Physical Geography</div>
+      <h1 class="page-hero__title">Geography of Jammu &amp; Kashmir</h1>
+      <p class="page-hero__subtitle">From high-altitude trans-Himalayan glaciers and river basins to Karewa plateaus, mountain passes, subterranean caves, thermal springs, and biodiversity zones — an exhaustive geographical registry of Jammu &amp; Kashmir.</p>
+      <div class="page-hero__meta">
+        <div class="page-hero__meta-item">📐 Area: <strong>~42,241 km²</strong></div>
+        <div class="page-hero__meta-item">🏔️ Highest point: <strong>Mount Nun (7,135 m)</strong></div>
+        <div class="page-hero__meta-item">🌊 Main river system: <strong>Jhelum &amp; Chenab Basins</strong></div>
+        <div class="page-hero__meta-item">📚 Database Topics: <strong>118+ Verified Modules</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="page-layout">
+
+      <article class="page-content">
+
+        <section class="content-section" aria-labelledby="overview-geo">
+          <h2 id="overview-geo">Geographic Overview &amp; Terrain Complexity</h2>
+          <p>Jammu &amp; Kashmir occupies a strategic and varied landscape in northern India, positioned at the western end of the Himalayan arc. The region encompasses dramatically different terrain — from subtropical plains in Jammu to alpine meadows, Karewa lacustrine plateaus, deep river gorges, and glaciated peaks in the north — making it one of the world's most geographically complex landforms.</p>
+          <p>Drained by the Jhelum, Chenab, Indus, and Ravi river systems, the physical geography of Jammu &amp; Kashmir is shaped by active tectonic collision along the Indus Suture Zone (ISZ) and Main Boundary Thrust (MBT), giving rise to unique thermal springs, subterranean caves, and alpine tarn networks.</p>
+        </section>
+
+        <!-- 100+ Geographical Topics Interactive Search Database -->
+        <section class="content-section" aria-labelledby="geo-db-heading" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); margin-bottom: 2.5rem;">
+          <div style="margin-bottom: 1.5rem;">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em;">🗺️ Interactive Geographical Database</span>
+            <h2 id="geo-db-heading" style="font-family: var(--font-heading); color: var(--navy); font-size: 1.8rem; margin: 0.25rem 0 0.5rem;">
+              Comprehensive J&amp;K Geography Registry (118+ Topics)
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+              Filter and search detailed geographical topics across rivers, glaciers, mountain passes, alpine tarns, valleys, Karewa plateaus, hot springs, cave systems, mountain ranges, wetlands, and microclimate soils.
+            </p>
+          </div>
+
+          <!-- Search Input -->
+          <div style="margin-bottom: 1.25rem;">
+            <input type="text" id="geoSearchInput" style="width: 100%; padding: 0.85rem 1.25rem; font-size: 1rem; border: 1px solid var(--gray-300); border-radius: var(--radius); outline: none; font-family: inherit;" placeholder="🔎 Search 118+ topics: Veshaw, Kolahoi, Zojila, Kausar Nag, Gurez, Karewa, Tatapani, Nun Kun..." oninput="filterGeoTopics()">
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <button class="geo-filter-btn active" data-cat="all" onclick="selectGeoCategory('all', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--navy); background: var(--navy); color: #ffffff; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🌐 All Topics (118+)</button>
+            <button class="geo-filter-btn" data-cat="river" onclick="selectGeoCategory('river', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🌊 Rivers &amp; Hydrology</button>
+            <button class="geo-filter-btn" data-cat="glacier" onclick="selectGeoCategory('glacier', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">❄️ Glaciers &amp; Ice</button>
+            <button class="geo-filter-btn" data-cat="pass" onclick="selectGeoCategory('pass', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">⛰️ Mountain Passes</button>
+            <button class="geo-filter-btn" data-cat="lake" onclick="selectGeoCategory('lake', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🏞️ Alpine Tarns &amp; Lakes</button>
+            <button class="geo-filter-btn" data-cat="valley" onclick="selectGeoCategory('valley', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🌄 Valleys &amp; Basins</button>
+            <button class="geo-filter-btn" data-cat="geo" onclick="selectGeoCategory('geo', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">📐 Geomorphology &amp; Karewas</button>
+            <button class="geo-filter-btn" data-cat="spring" onclick="selectGeoCategory('spring', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">♨️ Springs &amp; Thermal Waters</button>
+            <button class="geo-filter-btn" data-cat="cave" onclick="selectGeoCategory('cave', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🦇 Caves &amp; Subterranean</button>
+            <button class="geo-filter-btn" data-cat="peak" onclick="selectGeoCategory('peak', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🏔️ Peaks &amp; Ranges</button>
+            <button class="geo-filter-btn" data-cat="wetland" onclick="selectGeoCategory('wetland', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🦆 Wetlands &amp; Ramsar</button>
+            <button class="geo-filter-btn" data-cat="wildlife" onclick="selectGeoCategory('wildlife', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🦌 Sanctuaries &amp; Forests</button>
+            <button class="geo-filter-btn" data-cat="soil" onclick="selectGeoCategory('soil', this)" style="padding: 0.45rem 0.85rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.825rem; font-weight: 600;">🌱 Soils &amp; Microclimates</button>
+          </div>
+
+          <!-- Dynamic Topics Output Container -->
+          <div id="geoTopicsOutput" style="display: flex; flex-direction: column; gap: 1.25rem;"></div>
+        </section>
+
+        <section class="content-section" aria-labelledby="zones-heading">
+          <h2 id="zones-heading">Major Physiographic Zones</h2>
+
+          <div class="cards-grid cards-grid--2" style="gap:1.25rem;margin-bottom:2rem">
+            <div class="card">
+              <h3 style="font-family:var(--font-heading);color:var(--navy);font-size:1.1rem;margin-bottom:0.75rem">🌄 Kashmir Valley</h3>
+              <p style="font-size:var(--fs-sm);color:var(--gray-600);line-height:1.65">An intermontane valley approximately 135 km long and 32 km wide. Bounded by the Greater Himalayan Range to the northeast and the Pir Panjal Range to the southwest. Drained by the Jhelum River.</p>
+              <div style="margin-top:0.5rem;font-size:var(--fs-xs);color:var(--text-muted)">Principal city: Srinagar (Summer capital)</div>
+            </div>
+
+            <div class="card">
+              <h3 style="font-family:var(--font-heading);color:var(--navy);font-size:1.1rem;margin-bottom:0.75rem">🏙️ Jammu Region</h3>
+              <p style="font-size:var(--fs-sm);color:var(--gray-600);line-height:1.65">Transitional zone from the Indo-Gangetic plains to the lower Himalayas. The Shivalik hills and Pir Panjal foothills dominate the landscape. The city of Jammu lies on the banks of the river Tawi.</p>
+              <div style="margin-top:0.5rem;font-size:var(--fs-xs);color:var(--text-muted)">Principal city: Jammu (Winter capital)</div>
+            </div>
+          </div>
+
+          <figure style="margin:1.5rem 0;border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-sm)">
+            <img src="assets/images/kashmir_valley.png" alt="Panoramic view of the Kashmir Valley" style="width:100%;height:auto;display:block">
+            <figcaption style="padding:0.75rem 1rem;font-size:var(--fs-xs);color:var(--text-muted);background:var(--gray-50);border-top:1px solid var(--border)">
+              <strong>Kashmir Valley Landscape:</strong> Intermontane Jhelum basin bordered by snow-capped Pir Panjal and Greater Himalayan ranges.
+            </figcaption>
+          </figure>
+
+          <div class="data-table-wrap">
+            <table class="data-table striped" aria-label="Mountain ranges in J&K">
+              <thead><tr><th>Range</th><th>Location</th><th>Significance</th></tr></thead>
+              <tbody>
+                <tr><td>Greater Himalayan Range</td><td>Northern boundary</td><td>Forms the main watershed; glaciated peaks (Nun-Kun 7,135 m); Zojila pass</td></tr>
+                <tr><td>Pir Panjal Range</td><td>SW of Kashmir Valley</td><td>Separates Kashmir Valley from Jammu region; Banihal pass &amp; Mughal Road</td></tr>
+                <tr><td>Shivalik Hills</td><td>Southern fringe</td><td>Foothills transitioning to plains; Kandi soil belt; sacred temples</td></tr>
+                <tr><td>Zaskar Range</td><td>Between Kashmir &amp; Ladakh</td><td>High-altitude mountain wall framing Suru and Zanskar valleys</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- BOTANICAL & FLORAL BLOOM RESEARCH SHOWCASE -->
+        <!-- ============================================================ -->
+        <section class="floral-explorer-box" style="margin-top: 2rem;">
+          <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">🌸 Botanical Heritage &amp; Floral Research</span>
+          <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.6rem; margin: 0.2rem 0;">Jammu &amp; Kashmir Botanical Gardens &amp; Wild Floral Bloom Explorer</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Discover Asia's largest Tulip garden, purple Saffron crocus, sky-blue alpine poppies, Dal lake lotuses, and lavender valleys with floriculture research facts!</p>
+
+          <div id="floralBloomContainer"></div>
+        </section>
+
+        <section class="content-section" aria-labelledby="environment-heading">
+          <h2 id="environment-heading">Climate Challenges, Pollution &amp; Ecological Watchdog</h2>
+          
+          <div class="cards-grid cards-grid--2" style="gap:1.25rem;margin-top:1.5rem">
+            <div class="card" style="border-top: 4px solid var(--saffron);">
+              <h4 style="font-family:var(--font-heading);color:var(--navy);font-size:0.95rem;margin-bottom:0.5rem">🌡️ Glacier Retreat &amp; Water Security</h4>
+              <p style="font-size:var(--fs-sm);color:var(--gray-600);line-height:1.6">Major glaciers, including Kolahoi, Thajiwas, Machoi, and Drang-Drung, are retreating rapidly, threatening late-summer stream runoff and regional agriculture.</p>
+            </div>
+            <div class="card" style="border-top: 4px solid var(--saffron);">
+              <h4 style="font-family:var(--font-heading);color:var(--navy);font-size:0.95rem;margin-bottom:0.5rem">🚗 Diesel Emissions &amp; Black Carbon</h4>
+              <p style="font-size:var(--fs-sm);color:var(--gray-600);line-height:1.6">Heavy tourist vehicular transit releases black carbon soot that settles on glacier snowpack, reducing albedo and accelerating melting rates.</p>
+            </div>
+            <div class="card" style="border-top: 4px solid var(--saffron);">
+              <h4 style="font-family:var(--font-heading);color:var(--navy);font-size:0.95rem;margin-bottom:0.5rem">⛈️ Cloudbursts &amp; Flash Floods</h4>
+              <p style="font-size:var(--fs-sm);color:var(--gray-600);line-height:1.6">Altered weather patterns have increased localized cloudburst frequencies, triggering sudden mountain flash floods along Veshaw and Lidder rivers.</p>
+            </div>
+            <div class="card" style="border-top: 4px solid var(--saffron);">
+              <h4 style="font-family:var(--font-heading);color:var(--navy);font-size:0.95rem;margin-bottom:0.5rem">⛰️ Landslides &amp; Slope Destabilization</h4>
+              <p style="font-size:var(--fs-sm);color:var(--gray-600);line-height:1.6">Highway widening and tunnel excavation along NH-44 near Ramban cause frequent shooting stone hazards and seasonal blockades.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="references">
+          <h3>References</h3>
+          <ol>
+            <li><a href="https://en.wikipedia.org/wiki/Jammu_and_Kashmir_(union_territory)" target="_blank" rel="noopener">"Jammu and Kashmir (union territory)" — Wikipedia</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Kashmir_Valley" target="_blank" rel="noopener">"Kashmir Valley" — Wikipedia</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Geography_of_Jammu_and_Kashmir" target="_blank" rel="noopener">"Geography of Jammu and Kashmir" — Wikipedia</a></li>
+          </ol>
+        </div>
+
+      </article>
+
+      <aside class="page-sidebar" aria-label="Geographic quick facts">
+        <div class="info-box">
+          <div class="info-box__header">
+            <span class="info-box__icon">🗺️</span>
+            <span class="info-box__title">Geographic Facts</span>
+          </div>
+          <div class="info-box__body">
+            <div class="info-box__row"><span class="info-box__row-label">Total Area</span><span class="info-box__row-value">~42,241 km²</span></div>
+            <div class="info-box__row"><span class="info-box__row-label">Divisions</span><span class="info-box__row-value">2 (Jammu &amp; Kashmir)</span></div>
+            <div class="info-box__row"><span class="info-box__row-label">Highest Peak</span><span class="info-box__row-value">Nun Peak (7,135 m)</span></div>
+            <div class="info-box__row"><span class="info-box__row-label">Main Rivers</span><span class="info-box__row-value">Jhelum, Chenab, Tawi, Ravi</span></div>
+            <div class="info-box__row"><span class="info-box__row-label">Iconic Lakes</span><span class="info-box__row-value">Dal, Wular, Gangabal, Kausar Nag</span></div>
+            <div class="info-box__row"><span class="info-box__row-label">Glaciers</span><span class="info-box__row-value">Kolahoi, Thajiwas, Machoi</span></div>
+            <div class="info-box__row"><span class="info-box__row-label">Endemic Animal</span><span class="info-box__row-value">Hangul (Kashmir Stag)</span></div>
+          </div>
+        </div>
+
+        <div class="card" style="padding:1.5rem">
+          <h3 style="font-family:var(--font-heading);color:var(--navy);font-size:1rem;margin-bottom:0.75rem">Related Pages</h3>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <a href="history.html" class="btn btn-sm btn-outline-navy" style="justify-content:flex-start">📜 History</a>
+            <a href="demographics.html" class="btn btn-sm btn-outline-navy" style="justify-content:flex-start">👥 Demographics</a>
+            <a href="economy.html" class="btn btn-sm btn-outline-navy" style="justify-content:flex-start">💼 Economy</a>
+            <a href="culture.html" class="btn btn-sm btn-outline-navy" style="justify-content:flex-start">🎭 Culture</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/include_loader.js"></script>
+
+  <!-- Interactive 100+ Geography Database Script -->
+  <script>
+    let geoMasterDb = [];
+    let currentGeoCategory = 'all';
+
+    async function initGeoPage() {
+      try {
+        const response = await fetch('data/jk_master_database.json');
+        if (response.ok) {
+          geoMasterDb = await response.json();
+          filterGeoTopics();
+        }
+      } catch (e) {
+        console.error("Could not load geography database", e);
+      }
+    }
+
+    function selectGeoCategory(cat, btn) {
+      document.querySelectorAll('.geo-filter-btn').forEach(b => {
+        b.style.background = 'var(--white)';
+        b.style.color = 'var(--text-body)';
+        b.style.borderColor = 'var(--gray-300)';
+      });
+      if (btn) {
+        btn.style.background = 'var(--navy)';
+        btn.style.color = '#ffffff';
+        btn.style.borderColor = 'var(--navy)';
+      }
+      currentGeoCategory = cat;
+      filterGeoTopics();
+    }
+
+    function filterGeoTopics() {
+      const query = (document.getElementById('geoSearchInput').value || '').toLowerCase().trim();
+      const output = document.getElementById('geoTopicsOutput');
+      if (!output) return;
+
+      output.innerHTML = '';
+
+      // Filter to geography-relevant entries
+      let list = geoMasterDb.filter(item => {
+        const t = (item.type || '').toLowerCase();
+        const r = (item.region || '').toLowerCase();
+        // Check if item fits geography scope
+        return /river|glacier|pass|lake|tarn|valley|basin|geomorphology|karewa|spring|thermal|cave|peak|range|wetland|ramsar|sanctuary|forest|soil|microclimate|hydrology/i.test(t) ||
+               /kashmir|jammu|ladakh/i.test(r);
+      });
+
+      // Category filter
+      if (currentGeoCategory !== 'all') {
+        list = list.filter(item => {
+          const t = (item.type || '').toLowerCase();
+          if (currentGeoCategory === 'river') return /river|hydrology/i.test(t);
+          if (currentGeoCategory === 'glacier') return /glacier|ice/i.test(t);
+          if (currentGeoCategory === 'pass') return /pass|gateway/i.test(t);
+          if (currentGeoCategory === 'lake') return /lake|tarn/i.test(t);
+          if (currentGeoCategory === 'valley') return /valley|basin/i.test(t);
+          if (currentGeoCategory === 'geo') return /geomorphology|karewa|fault/i.test(t);
+          if (currentGeoCategory === 'spring') return /spring|thermal/i.test(t);
+          if (currentGeoCategory === 'cave') return /cave|subterranean/i.test(t);
+          if (currentGeoCategory === 'peak') return /peak|range|mountain/i.test(t);
+          if (currentGeoCategory === 'wetland') return /wetland|ramsar/i.test(t);
+          if (currentGeoCategory === 'wildlife') return /sanctuary|forest|wildlife/i.test(t);
+          if (currentGeoCategory === 'soil') return /soil|microclimate|alluvium/i.test(t);
+          return true;
+        });
+      }
+
+      // Query filter
+      if (query) {
+        list = list.filter(item => {
+          const n = (item.name || '').toLowerCase();
+          const t = (item.type || '').toLowerCase();
+          const r = (item.region || '').toLowerCase();
+          const p = (item.root_or_price || '').toLowerCase();
+          const m = (item.meaning_or_cta || '').toLowerCase();
+          const d = (item.lore_or_desc || '').toLowerCase();
+          return n.includes(query) || t.includes(query) || r.includes(query) || p.includes(query) || m.includes(query) || d.includes(query);
+        });
+      }
+
+      if (list.length === 0) {
+        output.innerHTML = `
+          <div style="background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center; color: var(--text-muted); font-style: italic;">
+            No geography topics match your query. Try searching for "Veshaw", "Banihal", "Zojila", "Kolahoi", "Karewa", or "Tatapani".
+          </div>
+        `;
+        return;
+      }
+
+      list.forEach(item => {
+        const card = document.createElement('article');
+        card.style.background = 'var(--white)';
+        card.style.border = '1px solid var(--border)';
+        card.style.borderRadius = 'var(--radius-md)';
+        card.style.padding = '1.5rem';
+        card.style.boxShadow = 'var(--shadow-xs)';
+        card.style.transition = 'border-color 0.2s, box-shadow 0.2s';
+
+        card.onmouseover = () => { card.style.borderColor = 'var(--navy)'; card.style.boxShadow = 'var(--shadow-md)'; };
+        card.onmouseout  = () => { card.style.borderColor = 'var(--border)'; card.style.boxShadow = 'var(--shadow-xs)'; };
+
+        card.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+            <div>
+              <span style="display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--navy); background: var(--gray-50); border: 1px solid var(--border); padding: 0.15rem 0.55rem; border-radius: var(--radius-sm); margin-bottom: 0.35rem;">
+                ${item.type || 'Geographical Module'} • ${item.region || 'Jammu & Kashmir'}
+              </span>
+              <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.25rem; margin: 0;">
+                ${item.name}
+              </h3>
+            </div>
+            ${item.ancient_or_earning && item.ancient_or_earning !== "N/A" ? `<div style="font-weight: 600; color: var(--gold); font-size: 0.875rem;">Ancient / Local Name: ${item.ancient_or_earning}</div>` : ''}
+          </div>
+
+          ${item.root_or_price ? `
+            <div style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 0.4rem;">
+              <strong>Etymological Origin:</strong> ${item.root_or_price}
+            </div>
+          ` : ''}
+
+          ${item.meaning_or_cta ? `
+            <p style="font-size: 0.9rem; color: var(--text-body); margin: 0.4rem 0; font-weight: 500; line-height: 1.6;">
+              <strong>Geographical Context &amp; Significance:</strong> ${item.meaning_or_cta}
+            </p>
+          ` : ''}
+
+          ${item.lore_or_desc ? `
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0.4rem 0; line-height: 1.6;">
+              <strong>Terrain &amp; Hydrological Details:</strong> ${item.lore_or_desc}
+            </p>
+          ` : ''}
+
+          ${item.dark_side_or_purity ? `
+            <div style="margin-top: 0.75rem; background: var(--gray-50); border-left: 3px solid var(--navy); padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.825rem; color: var(--text-body);">
+              <strong>Ecological Status &amp; Hazard Assessment:</strong> ${item.dark_side_or_purity}
+            </div>
+          ` : ''}
+        `;
+        output.appendChild(card);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initGeoPage);
+  </script>
+</body>
+</html>

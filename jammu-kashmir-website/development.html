@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Development Tracker — Jammu &amp; Kashmir Portal</title>
+  <meta name="description" content="Comprehensive tracker of completed, ongoing, and future developmental, industrial, and infrastructure plans in Jammu and Kashmir.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="load_data.js" defer></script>
+  <script src="js/audio_pronounce.js" defer></script>
+  <style>
+    /* 🍁 Handcrafted Heritage Theme Overrides for Development Tracker 🍁 */
+    :root {
+      --wool-cream: #faf7f0;       /* Raw Pashmina raw wool */
+      --terracotta: #a63a50;       /* Kashmiri brick / terracotta */
+      --walnut: #583e26;           /* Hand-carved walnut wood */
+      --saffron-gold: #d97706;     /* Pampore saffron pistil */
+      --pine-green: #1b4332;       /* Himalayan fir/pine */
+      --stone-border: #e6dfd3;     /* Hand-cut stone border */
+      --paper-shadow: 4px 4px 0px #dccbaf;
+    }
+
+    body {
+      background-color: var(--wool-cream) !important;
+      color: var(--walnut) !important;
+      font-family: 'Source Serif 4', Georgia, serif !important;
+    }
+
+    .handcrafted-card {
+      background: #ffffff !important;
+      border: 2px solid var(--stone-border) !important;
+      border-radius: 12px !important;
+      box-shadow: var(--paper-shadow) !important;
+      padding: 2rem;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+    
+    .handcrafted-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--saffron-gold) !important;
+      border-color: var(--saffron-gold) !important;
+    }
+
+    .phase-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      border: 1px solid currentColor;
+    }
+
+    .phase-completed {
+      color: var(--pine-green);
+      background-color: rgba(27, 67, 50, 0.08);
+    }
+
+    .phase-ongoing {
+      color: var(--saffron-gold);
+      background-color: rgba(217, 119, 6, 0.08);
+    }
+
+    .phase-planned {
+      color: var(--terracotta);
+      background-color: rgba(166, 58, 80, 0.08);
+    }
+
+    .dev-title {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+
+    /* Traditional wood accent border */
+    .wood-accent-bar {
+      border-left: 5px solid var(--terracotta) !important;
+    }
+
+    .patch-btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border: 2px dashed var(--walnut);
+      border-radius: 4px;
+      background: #ffffff;
+      color: var(--walnut);
+      font-weight: 600;
+      font-size: var(--fs-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: all 0.2s ease;
+      box-shadow: 2px 2px 0px var(--walnut);
+      text-decoration: none;
+    }
+    
+    .patch-btn:hover {
+      background: var(--terracotta);
+      color: #ffffff;
+      border-color: var(--terracotta);
+      box-shadow: 4px 4px 0px var(--saffron-gold);
+      text-decoration: none;
+    }
+
+    .source-tag {
+      font-size: 11px;
+      color: var(--walnut);
+      opacity: 0.7;
+      display: inline-block;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-bar__inner">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><span class="sep">›</span></li>
+        <li><span class="current">Development Tracker</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero" style="background: linear-gradient(135deg, #fdfbf7 0%, #f4eee1 100%); border-bottom: 4px double var(--terracotta)">
+    <div class="page-hero__inner" style="text-align: center">
+      <div class="page-hero__badge" style="background: var(--terracotta); color: white; border: 1px solid var(--terracotta)">🏗️ Infrastructure &amp; Progress</div>
+      <h1 class="page-hero__title dev-title" style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-top: 0.5rem">Jammu &amp; Kashmir Development Tracker</h1>
+      <p class="page-hero__subtitle" style="color: var(--walnut); font-style: italic; max-width: 800px; margin: 1rem auto 0">
+        An analyzed record of completed, ongoing, and future developmental pathways across the Union Territory, sourced from official state portals and planning boards.
+      </p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="page-layout">
+      <!-- Left Content Area -->
+      <article class="page-content">
+
+        <!-- Executive Summary -->
+        <section class="handcrafted-card wood-accent-bar">
+          <h2 class="dev-title" style="font-size: 1.8rem; margin-bottom: 1rem">📊 Development Analysis Overview</h2>
+          <p style="font-size: var(--fs-md); line-height: 1.7; margin-bottom: 1.5rem">
+            Development in Jammu &amp; Kashmir is powered by a strategic mixture of the Central Government's <strong>Prime Minister’s Development Package (PMDP)</strong>, the <strong>New Central Sector Scheme (NCSS)</strong>, and local executions under the **Jammu and Kashmir Infrastructure Development Finance Corporation (JKIDFC)**. This tracker presents the physical ground realities of J&amp;K's transition.
+          </p>
+          <div class="cards-grid cards-grid--3" style="gap: 1.25rem; margin-bottom: 1rem">
+            <div class="stat-card stat-card--accent" style="background: white">
+              <div class="stat-card__value" style="color: var(--terracotta)">₹5,824Cr</div>
+              <div class="stat-card__label" style="color: var(--walnut)">FY 25-26 Investment</div>
+              <div class="stat-card__note">13x increase over pre-2021 industrial levels</div>
+            </div>
+            <div class="stat-card stat-card--accent" style="background: white">
+              <div class="stat-card__value" style="color: var(--terracotta)">1,305</div>
+              <div class="stat-card__label" style="color: var(--walnut)">Active Startups</div>
+              <div class="stat-card__note">Compared to just 69 startups registered in 2020</div>
+            </div>
+            <div class="stat-card stat-card--accent" style="background: white">
+              <div class="stat-card__value" style="color: var(--terracotta)">1,500+</div>
+              <div class="stat-card__label" style="color: var(--walnut)">Languishing Projects</div>
+              <div class="stat-card__note">Rescued, funded, and completed by JKIDFC</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Phase 1: Completed Development (Happened Already) -->
+        <section aria-labelledby="completed-heading">
+          <div class="section-header" style="margin-bottom: 2rem">
+            <span class="section-eyebrow" style="color: var(--pine-green)">Phase I</span>
+            <h2 class="section-title dev-title" id="completed-heading" style="color: var(--pine-green)">Completed Achievements (Happened Already)</h2>
+            <p class="section-desc">Key infrastructures, strategic tunnels, and smart corridors that are active and serving the public today.</p>
+          </div>
+
+          <!-- Project 1 -->
+          <div class="handcrafted-card">
+            <span class="phase-badge phase-completed">✓ Active &amp; Operational</span>
+            <h3 class="dev-title" style="font-size: 1.4rem; margin-bottom: 0.5rem">🌉 The Chenab Arch &amp; Anji Khad Railway Bridges</h3>
+            <p style="margin-bottom: 0.75rem">
+              <strong>Objective:</strong> Overcoming extreme Himalayan geography to connect Kashmir Valley with the Indian Railways grid.
+            </p>
+            <p style="font-size: 14px; opacity: 0.9">
+              The completion of the world's highest railway arch bridge over the Chenab River (elevated 359 meters above the riverbed) alongside India's first cable-stayed bridge at Anji Khad. Track laying and trial runs are complete, paving the way for direct railway links between Srinagar and Jammu.
+            </p>
+            <span class="source-tag">Source: USBRL Monitoring Cell / Northern Railways</span>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="handcrafted-card">
+            <span class="phase-badge phase-completed">✓ Active &amp; Operational</span>
+            <h3 class="dev-title" style="font-size: 1.4rem; margin-bottom: 0.5rem">🚇 Z-Morh Escape Tunnel &amp; Banihal-Qazigund Double Tube</h3>
+            <p style="margin-bottom: 0.75rem">
+              <strong>Objective:</strong> Year-round, all-weather vehicular connectivity through heavy snow boundaries.
+            </p>
+            <p style="font-size: 14px; opacity: 0.9">
+              The 8.4 km Banihal-Qazigund road tunnel is fully open, bypassing landslide-prone sectors of the NH-44 highway. Concurrently, the strategic 6.5 km Z-Morh Tunnel's escape tube has been completed, providing vital winter access between Srinagar and Sonamarg.
+            </p>
+            <span class="source-tag">Source: National Highways and Infrastructure Development Corporation Ltd (NHIDCL)</span>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="handcrafted-card">
+            <span class="phase-badge phase-completed">✓ Active &amp; Operational</span>
+            <h3 class="dev-title" style="font-size: 1.4rem; margin-bottom: 0.5rem">⛲ Srinagar Jhelum Riverfront Rejuvenation</h3>
+            <p style="margin-bottom: 0.75rem">
+              <strong>Objective:</strong> Modernizing urban mobility and heritage spaces in Srinagar district.
+            </p>
+            <p style="font-size: 14px; opacity: 0.9">
+              Under the Srinagar Smart City initiative, the Jhelum Riverfront and Polo View market have been converted into pedestrian-friendly, high-density heritage zones. The city has also introduced a fleet of green electric transit buses to lower carbon footprint levels.
+            </p>
+            <span class="source-tag">Source: Srinagar Smart City Limited (SSCL)</span>
+          </div>
+        </section>
+
+        <!-- Phase 2: Ongoing Development (On Process) -->
+        <section aria-labelledby="ongoing-heading">
+          <div class="section-header" style="margin-bottom: 2rem">
+            <span class="section-eyebrow" style="color: var(--saffron-gold)">Phase II</span>
+            <h2 class="section-title dev-title" id="ongoing-heading" style="color: var(--saffron-gold)">Ongoing Development (In Process)</h2>
+            <p class="section-desc">Flagship projects currently under active excavation, construction, or trial phases.</p>
+          </div>
+
+          <!-- Project 1 -->
+          <div class="handcrafted-card">
+            <span class="phase-badge phase-ongoing">⏳ Active Construction</span>
+            <h3 class="dev-title" style="font-size: 1.4rem; margin-bottom: 0.5rem">🏔️ The Zojila Pass Tunnel Project</h3>
+            <p style="margin-bottom: 0.75rem">
+              <strong>Objective:</strong> Connecting Srinagar Valley with Ladakh UT all-year round.
+            </p>
+            <p style="font-size: 14px; opacity: 0.9">
+              Excavation is actively underway on the 14.15 km Zojila Pass Tunnel. Positioned at an altitude of 11,578 feet, this will be Asia's longest bi-directional tunnel, reducing travel time across the hazardous Zojila pass from 3 hours down to just 15 minutes.
+            </p>
+            <span class="source-tag">Source: National Highways and Infrastructure Development Corporation Ltd (NHIDCL)</span>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="handcrafted-card">
+            <span class="phase-badge phase-ongoing">⏳ Active Construction</span>
+            <h3 class="dev-title" style="font-size: 1.4rem; margin-bottom: 0.5rem">🌊 Jammu Tawi Riverfront Development</h3>
+            <p style="margin-bottom: 0.75rem">
+              <strong>Objective:</strong> Flood control and commercial zone expansion in Jammu city.
+            </p>
+            <p style="font-size: 14px; opacity: 0.9">
+              Modeled on successful riverfront formats across Western India, work is in progress to build artificial barrages, concrete channel walls, and recreational parks along the Tawi River bed, safeguarding low-lying city margins from monsoon overflows.
+            </p>
+            <span class="source-tag">Source: Jammu Smart City Limited (JSCL) / My Jammu</span>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="handcrafted-card">
+            <span class="phase-badge phase-ongoing">⏳ Active Construction</span>
+            <h3 class="dev-title" style="font-size: 1.4rem; margin-bottom: 0.5rem">⚡ Chenab Valley Hydropower Corridors (Pakal Dul &amp; Kiru)</h3>
+            <p style="margin-bottom: 0.75rem">
+              <strong>Objective:</strong> Harnessing run-of-the-river power potential for regional self-sufficiency.
+            </p>
+            <p style="font-size: 14px; opacity: 0.9">
+              Construction of the 1,000 MW Pakal Dul Hydroelectric Project and the 624 MW Kiru Hydroelectric Project on the Chenab River. These projects aim to expand power availability, although they face local ecological review constraints.
+            </p>
+            <span class="source-tag">Source: Chenab Valley Power Projects (CVPPPL) / Ministry of Power</span>
+          </div>
+        </section>
+
+        <!-- Phase 3: Future Planned Development (Future Plan) -->
+        <section aria-labelledby="planned-heading">
+          <div class="section-header" style="margin-bottom: 2rem">
+            <span class="section-eyebrow" style="color: var(--terracotta)">Phase III</span>
+            <h2 class="section-title dev-title" id="planned-heading">Future Plans &amp; Frameworks</h2>
+            <p class="section-desc">Policy reviews, structural expansion roadmaps, and land reservation guidelines designed for J&amp;K's future.</p>
+          </div>
+
+          <!-- Project 1 -->
+          <div class="handcrafted-card">
+            <span class="phase-badge phase-planned">🔮 Planned Framework</span>
+            <h3 class="dev-title" style="font-size: 1.4rem; margin-bottom: 0.5rem">🏭 New Industrial Policy &amp; MSME Revival Code</h3>
+            <p style="margin-bottom: 0.75rem">
+              <strong>Objective:</strong> Protecting local cottage industries while attracting structured mega-investments.
+            </p>
+            <p style="font-size: 14px; opacity: 0.9">
+              Under current drafting by a high-level government panel, the revised Industrial Policy seeks to bring sick MSME craft units on par with new projects for state incentives, while introducing self-certification rules to prevent bureaucratic delays.
+            </p>
+            <span class="source-tag">Source: J&amp;K Department of Industries &amp; Commerce / FCIK Proposals</span>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="handcrafted-card">
+            <span class="phase-badge phase-planned">🔮 Planned Framework</span>
+            <h3 class="dev-title" style="font-size: 1.4rem; margin-bottom: 0.5rem">🛣️ PMGSY-IV Connectivity Matrix</h3>
+            <p style="margin-bottom: 0.75rem">
+              <strong>Objective:</strong> Standardizing road transport to remaining remote mountainous habitations.
+            </p>
+            <p style="font-size: 14px; opacity: 0.9">
+              The upcoming phase of the Pradhan Mantri Gram Sadak Yojana (PMGSY-IV) targets laying over 3,300 km of new all-weather rural roads, connecting isolated Himalayan valleys and preventing agricultural market blockages.
+            </p>
+            <span class="source-tag">Source: J&amp;K Public Works Department (PWD)</span>
+          </div>
+        </section>
+
+        <!-- Rapid Development vs. Natural Calamities Questionnaire Section -->
+        <section aria-labelledby="calamities-heading" class="handcrafted-card" style="border-left: 5px solid var(--terracotta) !important; background: #fffcf8 !important;">
+          <h2 class="dev-title" id="calamities-heading" style="font-size: 1.8rem; margin-bottom: 0.5rem">⚠️ Eco-Vulnerability Investigation</h2>
+          <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--terracotta); font-weight: 700; margin-bottom: 1rem">
+            Jammu division Focus: Post-2019 Infrastructure Speed vs. Land Sinking
+          </p>
+          <p style="font-size: 14px; line-height: 1.6; margin-bottom: 1.5rem">
+            Since the reorganization of J&amp;K in 2019, infrastructure project implementation has accelerated rapidly. However, the fragile young fold mountains of the Chenab Valley (Ramban, Doda, Kishtwar) are showing signs of severe geological fatigue, leading to unprecedented land subsidence (sinking) and landslide hazards. 
+          </p>
+
+          <!-- Interactive Questionnaire Container -->
+          <div id="eco-quiz-box" style="background: #ffffff; border: 1px solid var(--stone-border); border-radius: 8px; padding: 1.5rem; box-shadow: inset 1px 1px 4px rgba(0,0,0,0.03);">
+            <div id="quiz-question-container">
+              <span style="font-size: 12px; font-weight: 700; color: var(--saffron-gold);" id="quiz-step-num">Question 1 of 3</span>
+              <h4 id="quiz-question-text" style="font-family: 'Playfair Display', Georgia, serif; color: var(--walnut); margin: 0.5rem 0 1rem; font-size: 1.2rem; font-weight: 700;">
+                Loading question...
+              </h4>
+              <div id="quiz-options-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <!-- Dynamically generated buttons -->
+              </div>
+            </div>
+            
+            <!-- Explanation/Result Alert -->
+            <div id="quiz-alert-box" style="display: none; margin-top: 1.25rem; padding: 1rem; border-radius: 6px; font-size: 13px; line-height: 1.5;"></div>
+            
+            <!-- Navigation Button -->
+            <button id="quiz-next-btn" class="patch-btn" style="display: none; margin-top: 1.25rem; padding: 0.5rem 1.25rem; font-size: 12px;">Next Question</button>
+
+            <!-- Final Quiz Result -->
+            <div id="quiz-final-box" style="display: none; text-align: center;">
+              <h4 style="font-family: 'Playfair Display', Georgia, serif; color: var(--pine-green); font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;">Investigation Complete</h4>
+              <p id="quiz-score-text" style="font-size: 14px; margin-bottom: 1rem; color: var(--walnut);"></p>
+              <div id="quiz-summary-explanation" style="font-size: 13px; text-align: left; background: var(--wool-cream); padding: 1rem; border-radius: 6px; border: 1px solid var(--stone-border); line-height: 1.6; margin-bottom: 1.25rem;"></div>
+              <button onclick="restartQuiz()" class="patch-btn" style="padding: 0.5rem 1.25rem; font-size: 12px;">Restart Quiz</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quiz Logic -->
+        <script>
+          const quizData = [
+            {
+              question: "Which highway sector in Jammu has seen the highest rise in landslide frequency and structural collapses during post-2019 excavation widening?",
+              options: [
+                "NH-44 (Srinagar-Jammu Highway, Nashri-Banihal Stretch)",
+                "Mughal Road (Poonch-Shopian Pass)",
+                "NH-1 (Srinagar-Leh Highway via Zojila)"
+              ],
+              correctIndex: 0,
+              explanation: "<strong>Correct.</strong> The four-laning of NH-44 along the steep slopes of Ramban has triggered continuous landslides, mudslides, and shooting stones. The cut-and-blast construction method in loose, sandy strata has made this stretch highly vulnerable."
+            },
+            {
+              question: "What major geological phenomenon recently forced the relocation of entire communities in Ramban's Parnote and Doda's Thathri regions?",
+              options: [
+                "Glacial Lake Outburst Floods (GLOFs)",
+                "Active Tectonic Subsidence & Land Sinking",
+                "Volcanic Soil Liquefaction"
+              ],
+              correctIndex: 1,
+              explanation: "<strong>Correct.</strong> Uncontrolled slope excavations and poor drainage networks have led to severe 'land sinking' (subsidence), physically splitting hillsides and collapsing dozens of houses."
+            },
+            {
+              question: "What human-induced factor is most critical in accelerating slope failures in the fragile young mountain belts of Chenab Valley?",
+              options: [
+                "Aggressive slope-cutting and explosive blasting without immediate retaining walls",
+                "Traditional terrace farming patterns",
+                "Excessive plantation of organic willow crops"
+              ],
+              correctIndex: 0,
+              explanation: "<strong>Correct.</strong> Geologists confirm that while regional development is vital, using heavy dynamite blasting and vertical slope cutting without immediate structural retention columns accelerates slope failures in young shale matrices."
+            }
+          ];
+
+          let currentStep = 0;
+          let quizScore = 0;
+
+          function initQuiz() {
+            currentStep = 0;
+            quizScore = 0;
+            document.getElementById("quiz-final-box").style.display = "none";
+            document.getElementById("quiz-question-container").style.display = "block";
+            showQuestion();
+          }
+
+          function showQuestion() {
+            const data = quizData[currentStep];
+            document.getElementById("quiz-step-num").innerText = `Question ${currentStep + 1} of ${quizData.length}`;
+            document.getElementById("quiz-question-text").innerText = data.question;
+            
+            const optionsList = document.getElementById("quiz-options-list");
+            optionsList.innerHTML = "";
+            
+            data.options.forEach((opt, idx) => {
+              const btn = document.createElement("button");
+              btn.innerText = opt;
+              btn.style.width = "100%";
+              btn.style.padding = "0.75rem 1rem";
+              btn.style.textAlign = "left";
+              btn.style.border = "1px solid var(--stone-border)";
+              btn.style.borderRadius = "6px";
+              btn.style.background = "#fff";
+              btn.style.color = "var(--walnut)";
+              btn.style.fontSize = "13px";
+              btn.style.fontFamily = "inherit";
+              btn.style.cursor = "pointer";
+              btn.style.transition = "all 0.2s ease";
+              
+              btn.onmouseover = () => { btn.style.background = "var(--wool-cream)"; };
+              btn.onmouseout = () => { btn.style.background = "#fff"; };
+              
+              btn.onclick = () => selectOption(idx);
+              optionsList.appendChild(btn);
+            });
+
+            document.getElementById("quiz-alert-box").style.display = "none";
+            document.getElementById("quiz-next-btn").style.display = "none";
+          }
+
+          function selectOption(selectedIndex) {
+            const data = quizData[currentStep];
+            const alertBox = document.getElementById("quiz-alert-box");
+            const nextBtn = document.getElementById("quiz-next-btn");
+            
+            // Disable all option buttons
+            const buttons = document.getElementById("quiz-options-list").getElementsByTagName("button");
+            for(let i = 0; i < buttons.length; i++) {
+              buttons[i].disabled = true;
+              if (i === data.correctIndex) {
+                buttons[i].style.background = "rgba(27, 67, 50, 0.15)";
+                buttons[i].style.borderColor = "var(--pine-green)";
+                buttons[i].style.fontWeight = "700";
+              }
+              if (i === selectedIndex && selectedIndex !== data.correctIndex) {
+                buttons[i].style.background = "rgba(166, 58, 80, 0.15)";
+                buttons[i].style.borderColor = "var(--terracotta)";
+              }
+            }
+
+            if (selectedIndex === data.correctIndex) {
+              quizScore++;
+              alertBox.style.background = "rgba(27, 67, 50, 0.08)";
+              alertBox.style.color = "var(--pine-green)";
+              alertBox.style.border = "1px solid var(--pine-green)";
+            } else {
+              alertBox.style.background = "rgba(166, 58, 80, 0.08)";
+              alertBox.style.color = "var(--terracotta)";
+              alertBox.style.border = "1px solid var(--terracotta)";
+            }
+
+            alertBox.innerHTML = data.explanation;
+            alertBox.style.display = "block";
+            nextBtn.style.display = "inline-block";
+          }
+
+          document.getElementById("quiz-next-btn").onclick = () => {
+            currentStep++;
+            if (currentStep < quizData.length) {
+              showQuestion();
+            } else {
+              showResults();
+            }
+          };
+
+          function showResults() {
+            document.getElementById("quiz-question-container").style.display = "none";
+            document.getElementById("quiz-next-btn").style.display = "none";
+            document.getElementById("quiz-alert-box").style.display = "none";
+            
+            const scorePercent = Math.round((quizScore / quizData.length) * 100);
+            document.getElementById("quiz-score-text").innerText = `Your Eco-Risk Awareness Score: ${quizScore} / ${quizData.length} (${scorePercent}%)`;
+            
+            let summaryText = "";
+            if (quizScore === quizData.length) {
+              summaryText = "🏆 <strong>Excellent Awareness!</strong> You recognize the critical geo-ecological warnings facing J&K. Experts call for integrating continuous laser-based land-monitoring systems, strict geological surveys, and halting vertical cuts on loose formations to sustain development without inducing disasters.";
+            } else {
+              summaryText = "⚠️ <strong>Mitigation Analysis:</strong> Rapid development in fragile zones demands stricter ecological balance. In places like Ramban and Doda, geological subsidence calls for structural soil pinning, improved bypass canals, and replacing heavy explosive blasting with gentle mechanical cutting.";
+            }
+            
+            document.getElementById("quiz-summary-explanation").innerHTML = summaryText;
+            document.getElementById("quiz-final-box").style.display = "block";
+          }
+
+          function restartQuiz() {
+            initQuiz();
+          }
+
+          // Initialize quiz on load
+          document.addEventListener("DOMContentLoaded", () => {
+            initQuiz();
+          });
+        </script>
+
+      </article>
+
+      <!-- Sidebar Area -->
+      <aside class="page-sidebar" aria-label="Reference Panel">
+        <!-- Quick Stats Box -->
+        <div class="info-box" style="border-color:var(--stone-border)">
+          <div class="info-box__header" style="background:#f4eee1; border-bottom-color:var(--stone-border); color:var(--terracotta)">
+            <span class="info-box__icon">📋</span>
+            <span class="info-box__title">Portal Directory</span>
+          </div>
+          <div class="info-box__body" style="padding: 1rem">
+            <div style="display:flex; flex-direction:column; gap:0.5rem">
+              <a href="index.html" class="patch-btn" style="text-align: center">🏠 Go to Home</a>
+              <a href="economy.html" class="patch-btn" style="text-align: center">💼 View Economy</a>
+              <a href="stats.html" class="patch-btn" style="text-align: center">📊 UT Statistics</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Portals Box -->
+        <div class="info-box" style="border-color:var(--stone-border)">
+          <div class="info-box__header" style="background:#f4eee1; border-bottom-color:var(--stone-border); color:var(--terracotta)">
+            <span class="info-box__icon">🔗</span>
+            <span class="info-box__title">Official Tracking Sites</span>
+          </div>
+          <div class="info-box__body" style="padding:0.75rem">
+            <div style="display:flex;flex-direction:column;gap:0.5rem">
+              <a href="https://www.jkidfc.in" target="_blank" rel="noopener" class="resource-card" style="padding:0.6rem 0.75rem;margin:0;border:1px solid var(--stone-border);background:#ffffff">
+                <span class="resource-card__icon" style="width:32px;height:32px;font-size:14px;background:#faf7f0">🏗️</span>
+                <div class="resource-card__body">
+                  <div class="resource-card__title" style="color:var(--walnut)">JKIDFC Portal</div>
+                  <div class="resource-card__desc">Languishing Projects Tracker</div>
+                </div>
+              </a>
+              <a href="https://jktenders.gov.in" target="_blank" rel="noopener" class="resource-card" style="padding:0.6rem 0.75rem;margin:0;border:1px solid var(--stone-border);background:#ffffff">
+                <span class="resource-card__icon" style="width:32px;height:32px;font-size:14px;background:#faf7f0">📄</span>
+                <div class="resource-card__body">
+                  <div class="resource-card__title" style="color:var(--walnut)">JK Tenders</div>
+                  <div class="resource-card__desc">eProcurement System</div>
+                </div>
+              </a>
+              <a href="https://startupjk.com" target="_blank" rel="noopener" class="resource-card" style="padding:0.6rem 0.75rem;margin:0;border:1px solid var(--stone-border);background:#ffffff">
+                <span class="resource-card__icon" style="width:32px;height:32px;font-size:14px;background:#faf7f0">💡</span>
+                <div class="resource-card__body">
+                  <div class="resource-card__title" style="color:var(--walnut)">StartupJK</div>
+                  <div class="resource-card__desc">Startup &amp; Innovation Registry</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/include_loader.js"></script>
+  <script src="assets/js/search.js"></script>
+</body>
+</html>

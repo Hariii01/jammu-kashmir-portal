@@ -1,0 +1,218 @@
+[
+  {
+    "location_name": "Jhelum",
+    "type": "River",
+    "region": "Kashmir",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Vitasta",
+    "literal_meaning": "Wide-spread / Measured by a single span",
+    "historical_mythological_context": "According to the Nilamata Purana, sage Kashyapa drained the primeval lake Satisar. Shiva then struck the ground with his trident at Verinag, measuring one span (Vitasti) to release Parvati in the form of cleansing waters."
+  },
+  {
+    "location_name": "Chenab",
+    "type": "River",
+    "region": "Jammu",
+    "linguistic_root": "Persian",
+    "ancient_vedic_name": "Asikni / Chandrabhaga",
+    "literal_meaning": "Water of the Moon (Chen = Moon, Ab = Water)",
+    "historical_mythological_context": "Formed by the confluence of the Chandra (Moon) and Bhaga (Sun) streams in Himachal. The Vedic name Asikni translates to 'dark-colored' due to the heavy silt load carried through Jammu's mountain gorges."
+  },
+  {
+    "location_name": "Ravi",
+    "type": "River",
+    "region": "Jammu",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Iravati",
+    "literal_meaning": "The Water-Giver / Associated with moisture",
+    "historical_mythological_context": "Dedicated to Ira, the goddess of water. Vedic legends associate the river with Airavata, the divine white elephant of Indra who replenishes the skies."
+  },
+  {
+    "location_name": "Tawi",
+    "type": "River",
+    "region": "Jammu",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Surya Putri",
+    "literal_meaning": "Daughter of the Sun",
+    "historical_mythological_context": "In local Dogra folklore, the river was brought down from the heavens by Pehar Devta, a local hero who performed penance to bring the divine river to heal his father."
+  },
+  {
+    "location_name": "Indus",
+    "type": "River",
+    "region": "Ladakh",
+    "linguistic_root": "Sanskrit / Tibetan",
+    "ancient_vedic_name": "Sindhu",
+    "literal_meaning": "The Great Body of Water / Ocean",
+    "historical_mythological_context": "Known in Tibetan as Sengge Zangbo ('Lion River') owing to its roaring flow as it cuts through the high-altitude trans-Himalayan gorges."
+  },
+  {
+    "location_name": "Lidder",
+    "type": "River",
+    "region": "Kashmir",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Lambodari",
+    "literal_meaning": "Long-bellied / Spacious-bellied",
+    "historical_mythological_context": "Named after Lambodara (Lord Ganesha). Refers to the wide, expansive gravel beds of the Lidder Valley fed by the Kolahoi Glacier."
+  },
+  {
+    "location_name": "Sindh",
+    "type": "River",
+    "region": "Kashmir",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Sandhya",
+    "literal_meaning": "Twilight River / Conjunction Stream",
+    "historical_mythological_context": "Historically sacred in Kashmiri Shaivism; pilgrims performed twilight purification rituals at the river confluences along the Sonamarg route."
+  },
+  {
+    "location_name": "Dal",
+    "type": "Lake",
+    "region": "Kashmir",
+    "linguistic_root": "Sanskrit / Kashmiri",
+    "ancient_vedic_name": "Dala",
+    "literal_meaning": "Leaf / Segment of Water",
+    "historical_mythological_context": "Demarcates the lake's physical configuration, split by natural bunds, causeways, and willow beds into leafy segments."
+  },
+  {
+    "location_name": "Wular",
+    "type": "Lake",
+    "region": "Kashmir",
+    "linguistic_root": "Sanskrit / Kashmiri",
+    "ancient_vedic_name": "Mahapadmasar",
+    "literal_meaning": "Lake of the Great Lotus / Wind-Waves Chasm",
+    "historical_mythological_context": "According to the Nilamata Purana, this was once a city submerged to form a lake home to the Mahapadma serpent guardian deity. The Kashmiri name Wular refers to its sudden, tempestuous waves."
+  },
+  {
+    "location_name": "Nigeen",
+    "type": "Lake",
+    "region": "Kashmir",
+    "linguistic_root": "Persian",
+    "ancient_vedic_name": "N/A",
+    "literal_meaning": "The Jewel in the Ring (Nagina)",
+    "historical_mythological_context": "So named because the small, deep circular pool is bordered by trees and mountains, mimicking a precious stone set within a ring."
+  },
+  {
+    "location_name": "Manasbal",
+    "type": "Lake",
+    "region": "Kashmir",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Manasasarovar",
+    "literal_meaning": "Lake of the Mind/Soul",
+    "historical_mythological_context": "Considered a localized manifestation of Lake Manasarovar. Local legends believed it was bottomless and connected to the spiritual underworld."
+  },
+  {
+    "location_name": "Gangabal",
+    "type": "Lake",
+    "region": "Kashmir",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Harmukh Ganga",
+    "literal_meaning": "Place of the Ganges",
+    "historical_mythological_context": "Lying at the foot of Mount Harmukh, Kashmiri Shaivites historically regarded it as the origin of the Ganges, serving as an ashes immersion site."
+  },
+  {
+    "location_name": "Vishansar",
+    "type": "Lake",
+    "region": "Kashmir",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Vishnusar",
+    "literal_meaning": "Lake of Lord Vishnu",
+    "historical_mythological_context": "A high-altitude glacier-fed lake, believed to be the home of Vishnu. The surrounding peaks are referred to as the Saptarishi (Seven Sages)."
+  },
+  {
+    "location_name": "Mansar",
+    "type": "Lake",
+    "region": "Jammu",
+    "linguistic_root": "Sanskrit / Dogri",
+    "ancient_vedic_name": "Manasarovar",
+    "literal_meaning": "Lake of the Mind",
+    "historical_mythological_context": "Linked to Mahabharata mythology. Prince Babruvahana shot an arrow into the ground to build an underworld tunnel entrance (Surinsar) and exit (Mansar)."
+  },
+  {
+    "location_name": "Surinsar",
+    "type": "Lake",
+    "region": "Jammu",
+    "linguistic_root": "Sanskrit / Dogri",
+    "ancient_vedic_name": "Surangasar",
+    "literal_meaning": "Tunnel Lake",
+    "historical_mythological_context": "The corresponding entry point of the mythological arrow-dug underworld tunnel created by Babruvahana to revive Arjuna."
+  },
+  {
+    "location_name": "Pangong Tso",
+    "type": "Lake",
+    "region": "Ladakh",
+    "linguistic_root": "Tibetan",
+    "ancient_vedic_name": "N/A",
+    "literal_meaning": "High Grassland Lake (Pang = Meadow, Tso = Lake)",
+    "historical_mythological_context": "An endorheic lake known for its changing blue, teal, and green hues against the dry, mountainous Himalayan landscape."
+  },
+  {
+    "location_name": "Gulmarg",
+    "type": "Tourist Spot",
+    "region": "Kashmir",
+    "linguistic_root": "Persian",
+    "ancient_vedic_name": "Gauri Marg",
+    "literal_meaning": "Meadow of Flowers",
+    "historical_mythological_context": "Originally named Gauri Marg (after Parvati). It was renamed by Sultan Yusuf Shah Chak in the 16th century, inspired by its wild spring blossoms."
+  },
+  {
+    "location_name": "Pahalgam",
+    "type": "Tourist Spot",
+    "region": "Kashmir",
+    "linguistic_root": "Kashmiri",
+    "ancient_vedic_name": "N/A",
+    "literal_meaning": "Village of Shepherds (Pahal = Shepherd, Gam = Village)",
+    "historical_mythological_context": "Reflects the historic role of the settlement as the base camp and trading post for migrating Nomadic shepherds."
+  },
+  {
+    "location_name": "Sonamarg",
+    "type": "Tourist Spot",
+    "region": "Kashmir",
+    "linguistic_root": "Kashmiri / Persian",
+    "ancient_vedic_name": "N/A",
+    "literal_meaning": "Meadow of Gold (Sona = Gold, Marg = Meadow)",
+    "historical_mythological_context": "Referencing the golden sunlight that illuminates the glacier slopes and silver birch trees."
+  },
+  {
+    "location_name": "Yusmarg",
+    "type": "Tourist Spot",
+    "region": "Kashmir",
+    "linguistic_root": "Kashmiri",
+    "ancient_vedic_name": "N/A",
+    "literal_meaning": "Meadow of Jesus (Yusa = Jesus, Marg = Meadow)",
+    "historical_mythological_context": "According to local oral traditions, Jesus rested in this pine-fringed meadow during his travels in the east."
+  },
+  {
+    "location_name": "Gurez",
+    "type": "Tourist Spot",
+    "region": "Kashmir",
+    "linguistic_root": "Dardic / Shina",
+    "ancient_vedic_name": "Gorai",
+    "literal_meaning": "Gateway of Horses",
+    "historical_mythological_context": "Derived from the ancient Dardic term Gorai, referring to the resting point and pasture gate for Silk Route horses."
+  },
+  {
+    "location_name": "Katra",
+    "type": "Tourist Spot",
+    "region": "Jammu",
+    "linguistic_root": "Dogri",
+    "ancient_vedic_name": "N/A",
+    "literal_meaning": "Small Market / Walled Enclosure",
+    "historical_mythological_context": "Established as a market town and registration post for pilgrims ascending the Trikuta hills to visit Vaishno Devi."
+  },
+  {
+    "location_name": "Patnitop",
+    "type": "Tourist Spot",
+    "region": "Jammu",
+    "linguistic_root": "Dogri",
+    "ancient_vedic_name": "Patan-da-Talab",
+    "literal_meaning": "Pond of the Princess",
+    "historical_mythological_context": "The original name Patan-da-Talab references a forest pond in the meadow where a princess of the ruling house would bathe."
+  },
+  {
+    "location_name": "Bhaderwah",
+    "type": "Tourist Spot",
+    "region": "Jammu",
+    "linguistic_root": "Sanskrit",
+    "ancient_vedic_name": "Bhadrakashi",
+    "literal_meaning": "Auspicious Kashi / Beautiful Valley",
+    "historical_mythological_context": "An ancient seat of snake worship (Nag Cult) and Shaivite learning, named Bhadrakashi for its spiritual resemblance to Varanasi."
+  }
+]

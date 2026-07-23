@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gallery — Jammu &amp; Kashmir Information Portal</title>
+  <meta name="description" content="Gallery of Jammu and Kashmir — landscapes, architecture, cultural heritage, and historical images of the region.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-bar__inner">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><span class="sep">›</span></li>
+        <li><span class="current">Gallery</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__badge">🖼️ Visual Reference</div>
+      <h1 class="page-hero__title">Gallery</h1>
+      <p class="page-hero__subtitle">Visual references illustrating the landscapes, cultural heritage, and historical significance of Jammu &amp; Kashmir.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="page-layout--full" style="max-width:1200px;margin:0 auto;padding:3rem 1.5rem">
+
+      <!-- Landscapes -->
+      <section aria-labelledby="landscapes-heading" style="margin-bottom:3.5rem">
+        <div class="section-header">
+          <span class="section-eyebrow">Physical Geography</span>
+          <h2 class="section-title" id="landscapes-heading">Landscapes &amp; Nature</h2>
+          <p class="section-desc">The breathtaking natural scenery that makes Jammu &amp; Kashmir one of India's most distinctive regions.</p>
+        </div>
+        <div class="gallery-grid-real">
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/kashmir_valley.png" alt="Kashmir Valley panorama with Himalayan peaks and green meadows" loading="lazy">
+            <figcaption>
+              <strong>Kashmir Valley</strong>
+              <span>Bounded by the Greater Himalayas and Pir Panjal Range — the heart of the region</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/dal_lake.png" alt="Dal Lake Srinagar with shikara boats and mountain backdrop" loading="lazy">
+            <figcaption>
+              <strong>Dal Lake, Srinagar</strong>
+              <span>Iconic urban lake famous for houseboats, shikara rides, and floating gardens</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/gulmarg.png" alt="Gulmarg alpine meadow in winter with snow and pine trees" loading="lazy">
+            <figcaption>
+              <strong>Gulmarg</strong>
+              <span>Premier ski resort at ~2,650m — snow-covered alpine meadow with Himalayan views</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/pahalgam.png" alt="Pahalgam valley with Lidder river and pine forest" loading="lazy">
+            <figcaption>
+              <strong>Pahalgam Valley</strong>
+              <span>Scenic Lidder River valley — base camp for Amarnath Yatra</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/saffron.png" alt="Saffron crocus fields in Pampore Kashmir, purple flowers" loading="lazy">
+            <figcaption>
+              <strong>Saffron Fields, Pampore</strong>
+              <span>GI-tagged Kashmir saffron — among the world's finest, harvested from crocus flowers</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Heritage -->
+      <section aria-labelledby="heritage-heading" style="margin-bottom:3.5rem">
+        <div class="section-header">
+          <span class="section-eyebrow">Historical &amp; Sacred Sites</span>
+          <h2 class="section-title" id="heritage-heading">Heritage &amp; Pilgrimage</h2>
+          <p class="section-desc">Ancient temples, shrines, and sites of historical and religious significance across the region.</p>
+        </div>
+        <div class="gallery-grid-real">
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/shankaracharya.png" alt="Shankaracharya Temple on hill overlooking Srinagar and Dal Lake" loading="lazy">
+            <figcaption>
+              <strong>Shankaracharya Temple, Srinagar</strong>
+              <span>Ancient Shaivite temple atop Shankaracharya Hill — a landmark of Kashmir</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/hazratbal.png" alt="Hazratbal Shrine white marble mosque on Dal Lake shore" loading="lazy">
+            <figcaption>
+              <strong>Hazratbal Shrine, Srinagar</strong>
+              <span>Revered white-marble shrine on Dal Lake's shore — significant Muslim heritage site</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/vaishno_devi.png" alt="Vaishno Devi temple in Trikuta mountains Jammu" loading="lazy">
+            <figcaption>
+              <strong>Vaishno Devi, Reasi</strong>
+              <span>One of India's most visited pilgrimage destinations — ~8 million visitors annually</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/jammu_temples.png" alt="Raghunath Temple Jammu with colorful flags" loading="lazy">
+            <figcaption>
+              <strong>Raghunath Temple, Jammu</strong>
+              <span>Historic temple complex in the "City of Temples" — Jammu's cultural landmark</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Culture -->
+      <section aria-labelledby="culture-heading" style="margin-bottom:3.5rem">
+        <div class="section-header">
+          <span class="section-eyebrow">Arts, Crafts &amp; Cuisine</span>
+          <h2 class="section-title" id="culture-heading">Cultural Heritage</h2>
+          <p class="section-desc">World-renowned handicrafts, traditional arts, and culinary traditions that define the region's identity.</p>
+        </div>
+        <div class="gallery-grid-real">
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/pashmina.png" alt="Kashmiri artisan weaving Pashmina shawl on traditional handloom" loading="lazy">
+            <figcaption>
+              <strong>Pashmina Weaving</strong>
+              <span>Hand-weaving ultra-fine Changthangi goat wool — among the world's finest textiles</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/carpet.png" alt="Kashmiri artisan hand-knotting carpet with intricate floral patterns" loading="lazy">
+            <figcaption>
+              <strong>Hand-knotted Carpet</strong>
+              <span>Traditional Kashmiri carpet-making — an internationally prized luxury craft</span>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card" onclick="openLightbox(this)">
+            <img src="assets/images/wazwan.png" alt="Kashmiri Wazwan feast with multiple dishes in copper tray" loading="lazy">
+            <figcaption>
+              <strong>Wazwan — The Grand Feast</strong>
+              <span>Kashmir's elaborate multi-course banquet — central to cultural and social life</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <p class="muted" style="font-size:var(--fs-sm);border-top:1px solid var(--border);padding-top:1.5rem">
+        📸 Images are AI-generated illustrations for reference purposes. Click any image to enlarge. For further reading, see the <a href="culture.html">Culture</a> and <a href="resources.html">Resources</a> pages.
+      </p>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" onclick="closeLightbox()">
+    <button class="lightbox__close" onclick="closeLightbox()" aria-label="Close">✕</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <div class="lightbox__caption" id="lightbox-caption"></div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/include_loader.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script>
+    function openLightbox(fig) {
+      var img = fig.querySelector('img');
+      var cap = fig.querySelector('figcaption strong');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-caption').textContent = cap ? cap.textContent : '';
+      var lb = document.getElementById('lightbox');
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
+  </script>
+
+  <style>
+    /* ─ Gallery Grid ─ */
+    .gallery-grid-real {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .gallery-card {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--white);
+      box-shadow: var(--shadow-xs);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin: 0;
+    }
+    .gallery-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .gallery-card:hover img { transform: scale(1.03); }
+    .gallery-card figcaption {
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .gallery-card figcaption strong {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .gallery-card figcaption span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    /* ─ Lightbox ─ */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.93);
+      z-index: 9000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox__close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      font-size: 1.25rem;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .lightbox__close:hover { background: rgba(255,255,255,0.2); }
+    .lightbox__img {
+      max-width: 90vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.5);
+    }
+    .lightbox__caption {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      font-family: var(--font-heading);
+      text-align: center;
+    }
+    @media(max-width:600px) {
+      .gallery-grid-real { grid-template-columns: 1fr; }
+      .gallery-card img { height: 200px; }
+    }
+  </style>
+</body>
+</html>

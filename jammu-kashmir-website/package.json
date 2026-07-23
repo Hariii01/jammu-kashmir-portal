@@ -1,0 +1,14 @@
+{
+  "name": "jk-insights-hub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./django_project/web/static/css/tailwind.build.css --minify",
+    "watch:css": "tailwindcss -i ./src/styles/tailwind.css -o ./django_project/web/static/css/tailwind.build.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.8",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.25"
+  }
+}

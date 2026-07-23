@@ -1,0 +1,126 @@
+/* ==========================================================================
+   J&K Insights Hub - Modern Dark Theme (OKLCH-based)
+   Features: OKLCH color engine, fluid typography, grid template areas, container queries
+   Hardware-accelerated micro-interactions and staggered entry animations
+   ========================================================================== */
+
+/* Fallback tokens for older browsers */
+:root{
+  --bg: #0b1114; /* deep titanium fallback */
+  --card: #0f1619;
+  --border: #162027;
+  --text: #e6f7fb;
+  --muted: #9fb6bd;
+  --primary: #071f2a; /* deep slate fallback */
+  --accent: #00f0ff; /* neon cyan */
+  --glow: #5a42ff; /* indigo glow fallback */
+  --radius: 12px;
+  --transition: cubic-bezier(0.25,1,0.5,1);
+}
+
+/* Modern color tokens (override in supporting browsers) */
+:root{
+  --bg: oklch(12% 0.02 260);
+  --card: oklch(6% 0.01 260);
+  --border: oklch(8% 0.01 260);
+  --text: oklch(95% 0.02 260);
+  --muted: oklch(70% 0.02 260);
+  --primary: oklch(6% 0.04 250);
+  --accent: oklch(65% 0.18 200); /* neon cyan */
+  --glow: oklch(30% 0.24 260); /* indigo glow */
+  --radius: 12px;
+  --transition: cubic-bezier(0.25,1,0.5,1);
+}
+
+/* Fluid typography */
+:root{
+  --fs-hero: clamp(1.6rem, 1.2rem + 2.2vw, 3.4rem);
+  --fs-h1: clamp(1.4rem, 1.05rem + 1.4vw, 2.2rem);
+  --fs-h2: clamp(1.15rem, 0.95rem + 0.9vw, 1.6rem);
+  --fs-base: clamp(0.95rem, 0.85rem + 0.2vw, 1.05rem);
+  --space-sm: clamp(8px, 1vw, 12px);
+  --space-md: clamp(12px, 1.5vw, 20px);
+  --space-lg: clamp(18px, 2.2vw, 32px);
+}
+
+/* Baseline */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent)}
+
+/* Page scaffold using Grid Template Areas */
+.app {
+  min-height:100vh;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas: "header" "alert" "main" "footer";
+}
+
+@media(min-width:1000px){
+  .app{grid-template-columns: 1fr 340px;grid-template-areas: "header header" "alert alert" "main sidebar" "footer footer";}
+}
+
+header.site-header{grid-area:header;padding:var(--space-md) var(--space-lg);display:flex;align-items:center;justify-content:space-between;gap:var(--space-md);background:linear-gradient(90deg,var(--primary),color-mix(in srgb,var(--primary) 60%,black 20%));border-bottom:1px solid var(--border)}
+.header-brand{display:flex;align-items:center;gap:var(--space-md)}
+.header-brand h1{font-size:var(--fs-h2);margin:0}
+
+.alert-banner{grid-area:alert;padding:6px var(--space-lg);background:linear-gradient(90deg,var(--glow),transparent);color:var(--text);font-size:0.95rem}
+
+.main-wrap{grid-area:main;padding:var(--space-lg);display:grid;grid-template-columns:1fr;gap:var(--space-lg)}
+@media(min-width:1000px){.main-wrap{grid-template-columns:2fr;}}
+
+.sidebar{grid-area:sidebar;padding:var(--space-lg);}
+
+footer.site-footer{grid-area:footer;padding:var(--space-md) var(--space-lg);border-top:1px solid var(--border);color:var(--muted)}
+
+/* Cards & container queries */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-md)}
+.card{background:linear-gradient(180deg,color-mix(in oklch,var(--card) 92%, black 3%),var(--card));border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-md);box-shadow:0 8px 30px rgba(0,0,0,0.45);transform:translateZ(0);container-type:inline-size}
+
+/* Container query example: adjust typography when card is narrow */
+@container (max-width:320px){
+  .card{padding:12px}
+  .card h3{font-size:var(--fs-h2)}
+}
+
+.card h3{font-size:var(--fs-h2);margin-bottom:var(--space-sm);color:var(--glow)}
+.card p{color:var(--muted);line-height:1.5}
+
+/* Hardware-accelerated hover (transform & opacity only) */
+.card{transition:transform 300ms var(--transition),box-shadow 300ms var(--transition)}
+.card:hover{transform:translateY(-8px) translateZ(0);box-shadow:0 20px 60px rgba(0,0,0,0.6);border-color:color-mix(in oklch,var(--glow) 60%, var(--border) 40%)}
+
+/* Staggered entrance */
+@keyframes enterUp{
+  0%{opacity:0;transform:translateY(14px) translateZ(0)}
+  100%{opacity:1;transform:translateY(0) translateZ(0)}
+}
+.enterable{opacity:0}
+.enterable.is-visible{animation:enterUp 520ms var(--transition) both;}
+.enterable[style*="--delay"]{animation-delay:var(--delay)}
+
+/* Interactive nav using only transform/opacity */
+.nav{display:flex;gap:var(--space-md);align-items:center}
+.nav a{padding:6px 10px;border-radius:8px;color:var(--text);background:transparent;transition:transform 200ms var(--transition),opacity 200ms var(--transition)}
+.nav a:hover{transform:translateY(-4px) scale(1.02);opacity:1}
+
+/* Utility layout helpers */
+.hero{display:flex;flex-direction:column;gap:var(--space-md);padding:var(--space-lg);border-radius:var(--radius);background:linear-gradient(180deg,color-mix(in oklch,var(--card) 96%,black 2%),var(--card));box-shadow:0 20px 50px rgba(0,0,0,0.6)}
+.hero h1{font-size:var(--fs-hero);margin:0;color:var(--accent)}
+
+.kv-row{display:flex;gap:var(--space-md);flex-wrap:wrap}
+.kv{flex:1 1 160px;background:transparent;padding:var(--space-md);border-radius:8px}
+
+/* Focus states (accessible) */
+:focus{outline:none}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 60%,black 10%);outline-offset:3px}
+
+/* Small screens tweaks */
+@media(max-width:640px){
+  header.site-header{padding:var(--space-sm) var(--space-md)}
+  .hero{padding:var(--space-md)}
+}
+
+/* EOF */

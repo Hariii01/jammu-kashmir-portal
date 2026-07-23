@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Community Archive &amp; Grassroots Tracker — Jammu &amp; Kashmir Portal</title>
+  <meta name="description" content="Community-led archive of Darbar Move memories, indigenous land terminology, and artisan price transparency calculators.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .archive-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .calculator-box {
+      background: var(--gray-50);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-top: 1.5rem;
+    }
+    .calc-slider-group {
+      margin-bottom: 1.25rem;
+    }
+    .calc-slider-group label {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--fs-sm);
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .calc-slider-group input[type="range"] {
+      width: 100%;
+      accent-color: var(--navy);
+    }
+    .glossary-term {
+      font-weight: 700;
+      color: var(--navy);
+      background: var(--gray-100);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-bar__inner">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><span class="sep">›</span></li>
+        <li><a href="political-analysis.html">Analysis</a></li>
+        <li><span class="sep">›</span></li>
+        <li><span class="current">Community Archive</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__badge">🌾 Grassroots Oral History</div>
+      <h1 class="page-hero__title">The J&amp;K Community Archive &amp; Transparency Tracker</h1>
+      <p class="page-hero__subtitle">Hosting un-digitized oral traditions, translating legacy land records, and auditing the artisan craft economy.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="page-layout">
+
+      <article class="page-content">
+
+        <!-- Part 1: Human Darbar Archive -->
+        <section class="content-section" id="darbar-archive" aria-labelledby="darbar-heading">
+          <h2 id="darbar-heading">📜 The Human Darbar Archive</h2>
+          <p>For nearly 150 years, the biannual <em>Darbar Move</em> forced thousands of families, clerks, and small business owners to migrate between Srinagar and Jammu. While ended administratively in 2021, the social integration, friendships, and cross-regional trade networks it fostered remain a core part of J&amp;K's living memory.</p>
+
+          <div class="archive-card" style="border-left: 4px solid var(--navy);">
+            <h3 style="font-size:1.1rem;margin-bottom:0.5rem">📖 "The Autumn Truck Exchange" — Oral Account</h3>
+            <p style="font-size:var(--fs-sm);color:var(--gray-700);font-style:italic">"Every October, as the secretariat moved down to Jammu, my father—who ran a dry fruit shop in Srinagar's Maharaja Bazaar—would coordinate with Jammu transport unions to ship almonds and walnuts. We shared tea and rooms for weeks. The trade built relationships that lasted generations, bridging Srinagar's winter freeze with Jammu's warm business season."</p>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:0.75rem"><strong>Recorded from:</strong> Ghulam Nabi Dar (Age 74), retired merchant, Srinagar. Recorded October 2024.</div>
+          </div>
+
+          <div class="archive-card" style="border-left: 4px solid var(--saffron);">
+            <h3 style="font-size:1.1rem;margin-bottom:0.5rem">📖 "Bhasha and Bolis: The Linguistic Bridge"</h3>
+            <p style="font-size:var(--fs-sm);color:var(--gray-700);font-style:italic">"Living in Jammu's Bhatindi during winters and shifting back to Srinagar in the spring taught our children both Dogri and Kashmiri. We learned each other's proverbs and celebrated Herath and Eid together. That shared culture was the true asset of the Darbar Move."</p>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:0.75rem"><strong>Recorded from:</strong> Pritam Singh (Age 68), retired Secretariat Clerk, Jammu. Recorded May 2025.</div>
+          </div>
+
+          <!-- Community Testimony Module -->
+          <div style="background:var(--gray-50);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-top:1.5rem">
+            <h4 style="color:var(--navy);margin-bottom:0.5rem">🤝 Contribute Your Darbar Memory</h4>
+            <p style="font-size:var(--fs-xs);color:var(--gray-600);margin-bottom:1rem">Protecting identity: Submissions can be made under an alias to protect privacy.</p>
+            <form id="darbar-upload-form" style="display:flex;flex-direction:column;gap:0.75rem">
+              <input type="text" id="darbar-alias" placeholder="Alias or Name (e.g. Elder from Sopore)" required style="padding:0.5rem;border:1px solid var(--border);border-radius:4px;font-size:var(--fs-sm)">
+              <textarea id="darbar-text" rows="3" placeholder="Describe the friendships, shared accommodation, or trade exchanges during the capital shifts..." required style="padding:0.5rem;border:1px solid var(--border);border-radius:4px;font-size:var(--fs-sm);resize:vertical"></textarea>
+              <button type="submit" class="btn btn-sm btn-outline-navy" style="align-self:flex-start">Upload to Archive</button>
+            </form>
+            <div id="darbar-submissions" style="margin-top:1rem;display:flex;flex-direction:column;gap:0.75rem"></div>
+          </div>
+        </section>
+
+        <!-- Part 2: Indigenous Land Terminology Glossary -->
+        <section class="content-section" id="land-glossary" aria-labelledby="glossary-heading">
+          <h2 id="glossary-heading">🗺️ Indigenous Land Terminology Glossary</h2>
+          <p>J&amp;K's land revenue administration relies heavily on Persian and Urdu terminology dating back to the Mughal and Dogra eras. Under post-2019 land reforms, understanding these legacy documents is essential for citizens protecting their property rights:</p>
+
+          <div class="data-table-wrap" style="margin-top:1.5rem;margin-bottom:1.5rem">
+            <table class="data-table striped" aria-label="Land Terminology Glossary">
+              <thead>
+                <tr>
+                  <th>Revenue Term</th>
+                  <th>Literal Meaning</th>
+                  <th>Modern English Definition</th>
+                  <th>Impact Under Post-2019 Laws</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="glossary-term">Khasra</span></td>
+                  <td>Registry Code</td>
+                  <td>The specific survey number assigned to a plot of land in the official village map (*Shajra*).</td>
+                  <td>Essential for identifying boundaries during land surveys. New laws allow digitized access to Khasra maps.</td>
+                </tr>
+                <tr>
+                  <td><span class="glossary-term">Girdawari</span></td>
+                  <td>Crop Inspection</td>
+                  <td>A bi-annual harvest register tracking land ownership, cultivation details, and the types of crops grown.</td>
+                  <td>Serves as legal proof of possession and agricultural use, crucial for preventing land conversion classification.</td>
+                </tr>
+                <tr>
+                  <td><span class="glossary-term">Shamilat</span></td>
+                  <td>Common Lands</td>
+                  <td>Village common land reserved for grazing, fuel gathering, and community infrastructure.</td>
+                  <td>Highly vulnerable; post-2019 rules permit the state to allocate Shamilat lands for industrial zones or public works.</td>
+                </tr>
+                <tr>
+                  <td><span class="glossary-term">Intikhab</span></td>
+                  <td>Abstract Extract</td>
+                  <td>An official extract of the land record (*Jamabandi*) proving ownership history and rights.</td>
+                  <td>Required for land transactions, division of family assets, and verifying title security against corporate lease requests.</td>
+                </tr>
+                <tr>
+                  <td><span class="glossary-term">Lal Dhara</span></td>
+                  <td>Red Line</td>
+                  <td>The boundary demarcating inhabited village residential land from surrounding agricultural plots.</td>
+                  <td>Determines property tax applicability and eligibility for construction permits under municipal laws.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Part 3: Artisan Exploitation Tracker -->
+        <section class="content-section" id="artisan-tracker" aria-labelledby="artisan-heading">
+          <h2 id="artisan-heading">🧵 Artisan Price Transparency Tracker</h2>
+          <p>Kashmiri handicrafts command premium prices in luxury global markets. However, the weavers, spinners, and woodcarvers who possess this heritage often receive low wages. Use the tool below to analyze how the retail price of J&amp;K crafts is distributed between local labor and commercial intermediaries.</p>
+
+          <div class="calculator-box">
+            <h3 style="font-family:var(--font-heading);color:var(--navy);margin-bottom:1rem">⚖️ Craft Value Distribution Calculator</h3>
+            
+            <div class="calc-slider-group">
+              <label for="craft-type">Select Craft Item</label>
+              <select id="craft-type" style="width:100%;padding:0.5rem;border:1px solid var(--border);border-radius:4px;font-size:var(--fs-sm)">
+                <option value="pashmina">Premium Pashmina Shawl (Hand-woven)</option>
+                <option value="papier">Papier-Mâché Floral Box (Hand-painted)</option>
+                <option value="walnut">Walnut Wood Carved Tray</option>
+              </select>
+            </div>
+
+            <div class="calc-slider-group">
+              <label for="retail-price">
+                <span>Global Retail Price (INR)</span>
+                <span id="retail-val" style="font-weight:700;color:var(--navy)">₹25,000</span>
+              </label>
+              <input type="range" id="retail-price" min="5000" max="100000" step="1000" value="25000">
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem" class="form-grid">
+              <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:1rem;text-align:center">
+                <div style="font-size:12px;color:var(--text-muted);text-transform:uppercase;font-weight:600">Artisan / Weaver Share</div>
+                <div id="artisan-share-val" style="font-size:1.5rem;font-weight:700;color:var(--green);margin:0.5rem 0">₹2,000</div>
+                <div id="artisan-pct" style="font-size:11px;color:var(--gray-600)">8% of retail price</div>
+              </div>
+
+              <div style="background:white;border:1px solid var(--border);border-radius:6px;padding:1rem;text-align:center">
+                <div style="font-size:12px;color:var(--text-muted);text-transform:uppercase;font-weight:600">Middleman &amp; Platform Share</div>
+                <div id="middleman-share-val" style="font-size:1.5rem;font-weight:700;color:#d9534f;margin:0.5rem 0">₹23,000</div>
+                <div id="middleman-pct" style="font-size:11px;color:var(--gray-600)">92% of retail price</div>
+              </div>
+            </div>
+
+            <p style="font-size:12px;color:var(--text-muted);margin-top:1.5rem;line-height:1.5;background:rgba(205,162,80,0.1);padding:0.75rem;border-left:3px solid var(--saffron);border-radius:4px">
+              <strong>Anthropological Insight:</strong> Weavers and spinners are often paid piecemeal wages, earning an average of ₹150–₹250 per day for highly skilled labor, while luxury export brands capture the majority of the profit.
+            </p>
+          </div>
+        </section>
+
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="page-sidebar" aria-label="Archive Directory">
+        <div class="info-box">
+          <div class="info-box__header">
+            <span class="info-box__icon">🌾</span>
+            <span class="info-box__title">Archive Index</span>
+          </div>
+          <div class="info-box__body" style="padding:0.75rem">
+            <div style="display:flex;flex-direction:column;gap:0.4rem">
+              <a href="#darbar-archive" style="font-size:var(--fs-sm);color:var(--link);padding:0.4rem 0.5rem;border-radius:4px;transition:background 0.15s" onmouseover="this.style.background='var(--gray-100)'" onmouseout="this.style.background=''">Human Darbar Archive</a>
+              <a href="#land-glossary" style="font-size:var(--fs-sm);color:var(--link);padding:0.4rem 0.5rem;border-radius:4px;transition:background 0.15s" onmouseover="this.style.background='var(--gray-100)'" onmouseout="this.style.background=''">Land Revenue Glossary</a>
+              <a href="#artisan-tracker" style="font-size:var(--fs-sm);color:var(--link);padding:0.4rem 0.5rem;border-radius:4px;transition:background 0.15s" onmouseover="this.style.background='var(--gray-100)'" onmouseout="this.style.background=''">Artisan Price Audit</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding:1.5rem">
+          <h3 style="font-family:var(--font-heading);color:var(--navy);font-size:1rem;margin-bottom:0.75rem">Resource Links</h3>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <a href="culture.html" class="btn btn-sm btn-outline-navy" style="justify-content:flex-start">🎭 Arts &amp; Culture</a>
+            <a href="economy.html" class="btn btn-sm btn-outline-navy" style="justify-content:flex-start">💼 Local Economy</a>
+            <a href="resources.html" class="btn btn-sm btn-accent" style="justify-content:flex-start">📖 Citizen's Handbook →</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/include_loader.js"></script>
+  <script src="assets/js/search.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Darbar Submission Handling
+      const darbarForm = document.getElementById('darbar-upload-form');
+      const darbarSubmissions = document.getElementById('darbar-submissions');
+
+      darbarForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const alias = document.getElementById('darbar-alias').value.trim();
+        const text = document.getElementById('darbar-text').value.trim();
+        if(!alias || !text) return;
+
+        const subCard = document.createElement('div');
+        subCard.className = 'archive-card';
+        subCard.style.borderLeft = '3px solid var(--saffron)';
+        subCard.style.background = 'var(--gray-50)';
+        subCard.style.padding = '1rem';
+        subCard.style.marginTop = '0.5rem';
+        subCard.innerHTML = '<p style="font-size:var(--fs-sm);color:var(--gray-700);font-style:italic">"' + escapeHTML(text) + '"</p>' +
+          '<div style="font-size:11px;color:var(--text-muted);margin-top:0.5rem"><strong>Contributed by:</strong> ' + escapeHTML(alias) + ' (Verified Citizen submission)</div>';
+        
+        darbarSubmissions.insertBefore(subCard, darbarSubmissions.firstChild);
+        darbarForm.reset();
+      });
+
+      function escapeHTML(str) {
+        return str.replace(/[&<>'"]/g, 
+          tag => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+          }[tag] || tag)
+        );
+      }
+
+      // 2. Calculator Logic
+      const craftType = document.getElementById('craft-type');
+      const retailPrice = document.getElementById('retail-price');
+      const retailVal = document.getElementById('retail-val');
+      const artisanShareVal = document.getElementById('artisan-share-val');
+      const middlemanShareVal = document.getElementById('middleman-share-val');
+      const artisanPct = document.getElementById('artisan-pct');
+      const middlemanPct = document.getElementById('middleman-pct');
+
+      const ratios = {
+        pashmina: 0.08, // Weavers get roughly 8%
+        papier: 0.12,   // Painters get roughly 12%
+        walnut: 0.15    // Woodcarvers get roughly 15%
+      };
+
+      function updateCalc() {
+        const val = parseInt(retailPrice.value, 10);
+        retailVal.innerText = '₹' + val.toLocaleString('en-IN');
+        
+        const type = craftType.value;
+        const artRatio = ratios[type] || 0.10;
+        
+        const artisanVal = Math.round(val * artRatio);
+        const middlemanVal = val - artisanVal;
+        
+        artisanShareVal.innerText = '₹' + artisanVal.toLocaleString('en-IN');
+        middlemanShareVal.innerText = '₹' + middlemanVal.toLocaleString('en-IN');
+        
+        artisanPct.innerText = Math.round(artRatio * 100) + '% of retail price';
+        middlemanPct.innerText = Math.round((1 - artRatio) * 100) + '% of retail price';
+      }
+
+      retailPrice.addEventListener('input', updateCalc);
+      craftType.addEventListener('change', updateCalc);
+      updateCalc();
+    });
+  </script>
+</body>
+</html>

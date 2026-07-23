@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="150" height="100">
+  <!-- Red background representing labor and sacrifice -->
+  <rect width="150" height="100" fill="#921a28"/>
+  <!-- Three vertical white stripes representing the three regions of Jammu, Kashmir, and Ladakh -->
+  <rect x="10" y="8" width="5" height="84" fill="#ffffff"/>
+  <rect x="20" y="8" width="5" height="84" fill="#ffffff"/>
+  <rect x="30" y="8" width="5" height="84" fill="#ffffff"/>
+  <!-- The agricultural white plough -->
+  <g transform="translate(45, 0)">
+    <!-- Main long wooden beam -->
+    <path d="M 25,48 L 78,58" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- Handle going up and backward -->
+    <path d="M 25,48 L 18,18 L 10,18" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Coulter base frame -->
+    <path d="M 25,48 L 30,76 L 55,76" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Ploughshare blade pointing forward -->
+    <path d="M 50,76 L 68,76 L 50,68 Z" fill="#ffffff"/>
+    <!-- Yoke connection point -->
+    <circle cx="78" cy="58" r="2.5" fill="#ffffff"/>
+  </g>
+</svg>

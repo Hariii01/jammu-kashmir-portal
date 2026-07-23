@@ -1,0 +1,664 @@
+/* ════════════════════════════════════════════════════════════════
+   PAMPORE SAFFRON BOTANICAL ARTISANAL SYSTEM  ·  v4.0
+   Kashmiri Hand-Maiden Ari / Zalakdozi Cultural Archive
+   ──────────────────────────────────────────────────────────────
+   Color Tokens  ·  Botanical Saffron Shield Frames
+   Hand-Maiden Ari Embroidery Chain-Stitch  ·  Kani Manuscript Margins
+   Dynamic Saffron Thread Graph  ·  WCAG AAA Compliance (>8.5:1)
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── ARTISANAL COLOR TOKEN PALETTE ────────────────────────────── */
+:root {
+  /* Core Saffron Palette */
+  --bg-parchment:   #FCFAF5;   /* Raw pashmina ivory linen backdrop */
+  --saffron-purple: #4A2E56;   /* Crocus sativus regal petal purple */
+  --stigma-crimson: #9E1B22;   /* Pure saffron thread blood-crimson */
+  --stamen-gold:    #DDAA33;   /* Organic inner stamen gold */
+  --foliage-green:  #3B5241;   /* Muted pine-needle foliage green */
+
+  /* Structural Rules & Layers */
+  --rule-light:     #EBE5DA;   /* Fine-line geometric divider */
+  --rule-strong:    #CFC5B4;   /* Structural frame divider */
+  --surface:        #FFFFFF;   /* Crisp paper card background */
+  --surface-tint:   #F8F5EE;   /* Tinted parchment panel */
+
+  /* System Functional Mapping */
+  --canvas:         var(--bg-parchment);
+  --ink-primary:    var(--saffron-purple);   /* 9.84:1 contrast ratio ✓ */
+  --ink-heading:    var(--saffron-purple);
+  --ink-subtle:     var(--foliage-green);    /* 7.76:1 contrast ratio ✓ */
+  --accent:         var(--stigma-crimson);   /* 9.35:1 contrast ratio ✓ */
+  --gold:           var(--stamen-gold);
+  --rule:           var(--rule-light);
+
+  /* Elevation Shadows */
+  --shadow-base:    0 2px 8px rgba(74, 46, 86, 0.04);
+  --shadow-hover:   0 10px 28px rgba(74, 46, 86, 0.08);
+
+  /* Typography */
+  --font-serif:     'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans:      'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:      'Courier New', monospace;
+
+  /* Easing */
+  --ease-ari:       cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ── Global Contrast & Base Reset ─────────────────────────────── */
+body {
+  background:  var(--bg-parchment) !important;
+  color:       var(--saffron-purple) !important;
+  font-family: var(--font-sans) !important;
+  font-size:   15px;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color:       var(--saffron-purple);
+  line-height: 1.25;
+}
+
+p, li, td, th, label, span {
+  color: var(--saffron-purple);
+}
+
+/* ── Suppress Heavy Canvas & Motion Layers ─────────────────────── */
+#loom-canvas,
+#sozni-canvas,
+#pinjra-lattice-bg,
+#kani-canvas-background {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   BOTANICAL SAFFRON SVG SHIELD FRAMES (.loom-panel)
+   Fine double-ruled geometric borders decorated with precise,
+   hand-drawn vector corner brackets modeled after Ari sketch patterns
+   ════════════════════════════════════════════════════════════════ */
+.loom-panel {
+  position:        relative;
+  background:      var(--surface);
+  border:          1px solid var(--stamen-gold);
+  outline:         1px solid var(--rule-light);
+  outline-offset:  -5px;
+  border-radius:   4px;
+  padding:         clamp(1.25rem, 3vw, 1.85rem);
+  box-shadow:      var(--shadow-base);
+  overflow:        hidden;
+  text-decoration: none !important;
+  color:           var(--saffron-purple) !important;
+  transition:
+    transform    250ms var(--ease-ari),
+    box-shadow   250ms var(--ease-ari),
+    border-color 250ms var(--ease-ari);
+
+  /* SVG Fractal Noise Parchment Texture Overlay */
+  background-image: radial-gradient(circle at 50% 0%, rgba(221, 170, 51, 0.03), transparent 70%),
+                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.08' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.29 0 0 0 0 0.18 0 0 0 0 0.34 0 0 0 0.015 0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Hand-Maiden Botanical Corner Brackets */
+.loom-panel::before {
+  content: '';
+  position: absolute;
+  top: 1px; left: 1px;
+  width: 14px; height: 14px;
+  border-top: 2px solid var(--stigma-crimson);
+  border-left: 2px solid var(--stigma-crimson);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.loom-panel::after {
+  content: '';
+  position: absolute;
+  bottom: 1px; right: 1px;
+  width: 14px; height: 14px;
+  border-bottom: 2px solid var(--stigma-crimson);
+  border-right: 2px solid var(--stigma-crimson);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Corner Bracket Accents (Top-Right & Bottom-Left) */
+.loom-panel-corner-tr {
+  position: absolute;
+  top: 1px; right: 1px;
+  width: 14px; height: 14px;
+  border-top: 2px solid var(--stigma-crimson);
+  border-right: 2px solid var(--stigma-crimson);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.loom-panel-corner-bl {
+  position: absolute;
+  bottom: 1px; left: 1px;
+  width: 14px; height: 14px;
+  border-bottom: 2px solid var(--stigma-crimson);
+  border-left: 2px solid var(--stigma-crimson);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.loom-panel:hover {
+  border-color: var(--stigma-crimson);
+  box-shadow:   var(--shadow-hover);
+}
+
+/* Typography inside Loom Panel */
+.loom-panel .lp-title,
+.loom-panel h3 {
+  font-family: var(--font-serif);
+  font-size:   1.2rem;
+  font-weight: 700;
+  color:       var(--saffron-purple);
+  margin:      0 0 0.4rem;
+}
+
+.lp-eyebrow {
+  display:        block;
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  font-weight:    700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color:          var(--foliage-green);
+  margin-bottom:  0.3rem;
+}
+
+.lp-body,
+.loom-panel p {
+  font-family: var(--font-sans);
+  font-size:   0.875rem;
+  color:       var(--saffron-purple);
+  line-height: 1.65;
+  margin:      0;
+}
+
+.lp-icon {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.lp-stamp {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-top:      1.1rem;
+  padding-top:     0.65rem;
+  border-top:      1px solid var(--rule-light);
+  font-family:     var(--font-mono);
+  font-size:       10px;
+  color:           var(--foliage-green);
+  letter-spacing:  0.04em;
+}
+
+.loom-badge {
+  display:        inline-block;
+  padding:        0.15rem 0.55rem;
+  font-family:    var(--font-mono);
+  font-size:      9px;
+  font-weight:    700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border:         1px solid var(--stamen-gold);
+  border-radius:  2px;
+  color:          var(--saffron-purple);
+  background:     var(--surface-tint);
+}
+
+a.loom-panel { color: var(--saffron-purple) !important; }
+a.loom-panel:hover { text-decoration: none !important; }
+
+/* ════════════════════════════════════════════════════════════════
+   HAND-MAIDEN EMBROIDERY HOVER EFFECTS (Ari / Zalakdozi Stitch)
+   CSS stroke-dasharray & dashed border transitions flowing smoothly
+   from Foliage Green (#3B5241) to Saffron Purple (#4A2E56) in 250ms
+   ════════════════════════════════════════════════════════════════ */
+.patch-btn,
+.domain-toggle-btn,
+.filter-tab,
+#loom-mode-toggle,
+.ari-stitch-node {
+  border: 1.5px dashed var(--foliage-green) !important;
+  transition:
+    border-color 250ms var(--ease-ari),
+    background-color 250ms var(--ease-ari),
+    color 250ms var(--ease-ari),
+    box-shadow 250ms var(--ease-ari) !important;
+  font-family: var(--font-sans) !important;
+}
+
+.patch-btn:hover,
+.domain-toggle-btn:hover,
+.filter-tab:hover,
+#loom-mode-toggle:hover,
+.ari-stitch-node:hover {
+  border-color: var(--saffron-purple) !important;
+  border-style: dashed !important;
+  background-color: rgba(74, 46, 86, 0.05) !important;
+  color: var(--saffron-purple) !important;
+  box-shadow: 0 4px 14px rgba(74, 46, 86, 0.08) !important;
+}
+
+.domain-toggle-btn.active,
+.filter-tab.active {
+  background: var(--saffron-purple) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid var(--stigma-crimson) !important;
+  box-shadow: 0 4px 12px rgba(74, 46, 86, 0.15) !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   GEOMETRIC INTERLOCKING GRID & KANI MANUSCRIPT MARGINS
+   1px solid separator (#EBE5DA) + Diamond Section Headers (◆)
+   flanked by floral branch lines
+   ════════════════════════════════════════════════════════════════ */
+.loom-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 28vw, 280px), 1fr));
+  gap:                   var(--gap, 24px);
+  align-items:           start;
+}
+
+.craft-motif-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 25vw, 260px), 1fr));
+  gap:                   var(--gap, 24px);
+}
+
+/* Section Header Branch Divider */
+.section-branch-header {
+  display:     flex;
+  align-items: center;
+  gap:         1rem;
+  margin:      2rem 0 1.25rem;
+}
+
+.section-branch-header::before {
+  content:    '';
+  flex:       1;
+  height:     1px;
+  background: linear-gradient(to right, transparent, var(--stamen-gold), var(--stigma-crimson));
+}
+
+.section-branch-header::after {
+  content:    '';
+  flex:       1;
+  height:     1px;
+  background: linear-gradient(to left, transparent, var(--stamen-gold), var(--stigma-crimson));
+}
+
+.section-branch-title {
+  font-family:    var(--font-serif);
+  font-size:      clamp(1.4rem, 3vw, 2rem);
+  font-weight:    700;
+  color:          var(--saffron-purple);
+  display:        flex;
+  align-items:    center;
+  gap:            0.6rem;
+  margin:         0;
+  white-space:    nowrap;
+}
+
+.section-branch-symbol {
+  color:       var(--stamen-gold);
+  font-size:   12px;
+  line-height: 1;
+}
+
+/* Kani Margin Separator */
+.kani-margin-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--rule-light);
+  margin: 2.25rem 0;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   PRIMARY SAFFRON BOTANICAL DASHBOARD & METRICS PANEL
+   Contains Saffron Flower Watermark (0.05 -> 0.09) + Thread Graph
+   ════════════════════════════════════════════════════════════════ */
+.saffron-dashboard-panel {
+  position:      relative;
+  background:    var(--surface);
+  border:        1.5px solid var(--stamen-gold);
+  outline:       1px solid var(--rule-light);
+  outline-offset: -6px;
+  border-radius: 6px;
+  padding:       2rem;
+  box-shadow:    var(--shadow-base);
+  margin-bottom: 2.5rem;
+}
+
+/* Static Saffron Flower Profile SVG Watermark */
+.saffron-watermark-svg {
+  position:       absolute;
+  bottom:         -15px;
+  right:          -15px;
+  width:          260px;
+  height:         260px;
+  opacity:        0.05;
+  pointer-events: none;
+  transition:     opacity 300ms var(--ease-ari);
+  z-index:        0;
+}
+
+.saffron-dashboard-panel:hover .saffron-watermark-svg {
+  opacity: 0.09;
+}
+
+.saffron-dashboard-content {
+  position: relative;
+  z-index:  1;
+}
+
+/* DYNAMIC SAFFRON THREAD GRAPH SYSTEM */
+.saffron-graph-wrapper {
+  margin-top: 1.5rem;
+  background: var(--surface-tint);
+  border:     1px solid var(--rule-light);
+  border-radius: 6px;
+  padding:    1.25rem;
+}
+
+.saffron-graph-header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  flex-wrap:       wrap;
+  gap:             0.75rem;
+  margin-bottom:   1rem;
+}
+
+.saffron-graph-title {
+  font-family:    var(--font-serif);
+  font-size:      1.1rem;
+  font-weight:    700;
+  color:          var(--saffron-purple);
+  margin:         0;
+}
+
+.saffron-graph-legend {
+  display:     flex;
+  align-items: center;
+  gap:         1.25rem;
+  font-family: var(--font-mono);
+  font-size:   10px;
+}
+
+.legend-item {
+  display:     flex;
+  align-items: center;
+  gap:         0.4rem;
+}
+
+.legend-dot-crimson {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--stigma-crimson);
+}
+.legend-dot-gold {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--stamen-gold);
+}
+
+/* SVG Tendril Line Graph */
+.saffron-thread-svg {
+  width:     100%;
+  height:    160px;
+  overflow:  visible;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   CORPORATE CHRONICLE TICKER
+   Single-ruled solid line borders (#EBE5DA), ■ geometric nodes
+   ════════════════════════════════════════════════════════════════ */
+.chronicle-ticker {
+  position:      relative;
+  overflow:      hidden;
+  white-space:   nowrap;
+  background:    var(--surface);
+  color:         var(--saffron-purple);
+  font-family:   var(--font-sans);
+  font-size:     12.5px;
+  border-top:    1px solid var(--rule-light);
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.ct-track {
+  display: inline-block;
+  padding: 0.55rem 2rem;
+}
+
+.ct-label {
+  display:        inline-block;
+  font-family:    var(--font-mono);
+  font-size:      9.5px;
+  font-weight:    700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          var(--saffron-purple);
+  margin-right:   0.4rem;
+  padding:        1px 6px;
+  border:         1px solid var(--stamen-gold);
+  border-radius:  2px;
+  background:     var(--surface-tint);
+}
+
+.ct-node {
+  color:          var(--stigma-crimson);
+  margin:         0 1rem;
+  font-size:      7px;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ct-track {
+    animation: saffron-ticker-scroll 38s linear infinite;
+  }
+  @keyframes saffron-ticker-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   DOMAIN NAVIGATION BAR
+   ════════════════════════════════════════════════════════════════ */
+.domain-navigation {
+  background:    var(--surface) !important;
+  border-bottom: 1px solid var(--rule-light) !important;
+  box-shadow:    var(--shadow-base) !important;
+  position:      sticky;
+  top:           0;
+  z-index:       1000;
+}
+
+.domain-nav-inner {
+  max-width:       1180px;
+  margin:          0 auto;
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  gap:             0.75rem;
+  padding:         0.65rem 1rem;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   QUICK STATS & WEAVE STAT TILES
+   ════════════════════════════════════════════════════════════════ */
+.weave-stat-box {
+  background:    var(--surface) !important;
+  border:        1px solid var(--stamen-gold) !important;
+  outline:       1px solid var(--rule-light) !important;
+  outline-offset: -3px;
+  border-radius: 4px !important;
+  padding:       1rem 1.4rem !important;
+  text-align:    center !important;
+  min-width:     125px !important;
+  box-shadow:    var(--shadow-base) !important;
+  transition:    all 250ms var(--ease-ari) !important;
+}
+
+.weave-stat-box:hover {
+  border-color: var(--stigma-crimson) !important;
+  box-shadow:   var(--shadow-hover) !important;
+  transform:    translateY(-2px) !important;
+}
+
+.weave-stat-box .val {
+  font-family: var(--font-serif) !important;
+  font-size:   1.9rem !important;
+  font-weight: 700 !important;
+  color:       var(--saffron-purple) !important;
+}
+
+.weave-stat-box .label {
+  font-family:    var(--font-mono) !important;
+  font-size:      9px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color:          var(--foliage-green) !important;
+}
+
+.quick-stats {
+  background:    var(--surface-tint) !important;
+  border-bottom: 1px solid var(--rule-light) !important;
+}
+
+.quick-stats__num {
+  font-family: var(--font-serif) !important;
+  color:       var(--saffron-purple) !important;
+}
+
+.quick-stats__lbl {
+  color: var(--foliage-green) !important;
+}
+
+.quick-stats__icon {
+  background: var(--surface) !important;
+  color:      var(--saffron-purple) !important;
+  border:     1px solid var(--rule-light) !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   HERO AREA & BUTTONS
+   ════════════════════════════════════════════════════════════════ */
+.hero-handicraft-wrap {
+  background:    var(--bg-parchment) !important;
+  border-bottom: 1px solid var(--rule-light) !important;
+  min-height:    auto !important;
+  padding:       3rem 1rem !important;
+}
+
+.hero-title-handcrafted {
+  font-family: var(--font-serif) !important;
+  color:       var(--saffron-purple) !important;
+  font-size:   clamp(2.5rem, 6vw, 4.5rem) !important;
+  text-shadow: none !important;
+}
+
+.hero-sub-handcrafted {
+  font-family: var(--font-sans) !important;
+  color:       var(--foliage-green) !important;
+  font-style:  normal !important;
+}
+
+.royal-court-badge {
+  background:    var(--surface-tint) !important;
+  border:        1px dashed var(--stamen-gold) !important;
+  color:         var(--saffron-purple) !important;
+  box-shadow:    none !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   PINJRAKARI & CARPET CARDS
+   ════════════════════════════════════════════════════════════════ */
+.pinjrakari-grid-wrapper {
+  background:    var(--surface-tint) !important;
+  border:        1px solid var(--stamen-gold) !important;
+  outline:       1px solid var(--rule-light) !important;
+  outline-offset: -5px;
+  border-radius: 6px !important;
+  padding:       2rem !important;
+  box-shadow:    var(--shadow-base) !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.handcrafted-card,
+.carpet-card,
+.marketplace-card {
+  background:    var(--surface) !important;
+  border:        1px solid var(--stamen-gold) !important;
+  outline:       1px solid var(--rule-light) !important;
+  outline-offset: -4px;
+  border-radius: 4px !important;
+  box-shadow:    var(--shadow-base) !important;
+  transition:    all 250ms var(--ease-ari) !important;
+}
+
+.handcrafted-card:hover,
+.carpet-card:hover,
+.marketplace-card:hover {
+  border-color: var(--stigma-crimson) !important;
+  box-shadow:   var(--shadow-hover) !important;
+  transform:    none !important;
+}
+
+.carpet-card__title {
+  color:       var(--saffron-purple) !important;
+  font-family: var(--font-serif) !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   SEARCH INPUT
+   ════════════════════════════════════════════════════════════════ */
+.archive-search-input {
+  font-family:   var(--font-sans) !important;
+  background:    var(--surface) !important;
+  border:        1.5px dashed var(--foliage-green) !important;
+  color:         var(--saffron-purple) !important;
+  border-radius: 4px !important;
+  transition:    border-color 250ms var(--ease-ari) !important;
+}
+
+.archive-search-input:focus {
+  border-color: var(--saffron-purple) !important;
+  border-style: solid !important;
+  outline:      none !important;
+  box-shadow:   0 0 0 3px rgba(74, 46, 86, 0.12) !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   LAYOUT LIST MODE
+   ════════════════════════════════════════════════════════════════ */
+body.layout-list-mode .loom-grid,
+body.layout-list-mode .craft-motif-grid {
+  grid-template-columns: 1fr;
+}
+
+body.layout-list-mode .loom-panel {
+  display:               grid;
+  grid-template-columns: auto 1fr;
+  align-items:           start;
+  gap:                   0 1.25rem;
+}
+
+body.layout-list-mode .lp-stamp {
+  grid-column: 2;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   REDUCED MOTION RESET
+   ════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration:        0.001ms !important;
+    animation-iteration-count: 1       !important;
+    transition-duration:       0.001ms !important;
+  }
+  .ct-track { animation: none !important; }
+  .loom-panel { transform: none !important; }
+}

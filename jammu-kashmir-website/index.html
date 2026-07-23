@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jammu &amp; Kashmir — Special Heritage &amp; Geospatial Archive</title>
+  <meta name="description" content="An authoritative regional analysis archive documenting the history, special status, local craft economies, land records, and fragile Himalayan ecosystems of Jammu &amp; Kashmir.">
+  <meta name="keywords" content="Jammu Kashmir Ground Reality, J&amp;K Etymology Dictionary, Kashmir Saffron, Dogra History, Pashmina Artisans, Gurez Valley, Jhelum Vitasta, Khasra Girdawari">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://127.0.0.1:8000/index.html">
+  <meta property="og:title" content="Jammu &amp; Kashmir — Special Heritage &amp; Geospatial Archive">
+  <meta property="og:description" content="An authoritative ground reality archive detailing history, local craft economies, etymology, and alpine ecosystems of Jammu &amp; Kashmir.">
+  <meta property="og:image" content="http://127.0.0.1:8000/assets/logo.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="http://127.0.0.1:8000/index.html">
+  <meta property="twitter:title" content="Jammu &amp; Kashmir — Special Heritage &amp; Geospatial Archive">
+  <meta property="twitter:description" content="An authoritative ground reality archive detailing history, local craft economies, etymology, and alpine ecosystems of Jammu &amp; Kashmir.">
+  <meta property="twitter:image" content="http://127.0.0.1:8000/assets/logo.svg">
+
+  <!-- JSON-LD Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8000/#website",
+    "url": "http://127.0.0.1:8000/index.html",
+    "name": "Jammu & Kashmir Special Heritage & Geospatial Archive",
+    "description": "A geospatial archive and regional analysis portal documenting J&K history, etymology, land records, and alpine ecosystems.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jammu & Kashmir Geospatial Archive",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://127.0.0.1:8000/assets/logo.svg"
+      }
+    }
+  }
+  </script>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="load_data.js" defer></script>
+  <script src="js/news_loader.js" defer></script>
+  <script src="js/audio_pronounce.js" defer></script>
+  <script src="js/interactive_widgets.js" defer></script>
+
+  <style>
+    /* Dynamic Marquee Styling */
+    .dynamic-marquee-banner {
+      background: var(--navy);
+      color: #ffffff;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 0.65rem 0;
+      font-size: 0.875rem;
+      border-bottom: 2px solid var(--saffron);
+      position: relative;
+    }
+    .dynamic-marquee-track {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee-loop 48s linear infinite;
+    }
+    .dynamic-marquee-banner:hover .dynamic-marquee-track {
+      animation-play-state: paused;
+    }
+    @keyframes marquee-loop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-chip {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      color: var(--saffron-light);
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+      margin-right: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .marquee-sep {
+      color: var(--saffron);
+      margin: 0 1.25rem;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Include -->
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="hero" style="background: linear-gradient(135deg, #7c1522 0%, #4a0d16 100%); color: #ffffff; padding: 4rem 1.5rem; text-align: center;">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <span style="display: inline-block; padding: 0.35rem 1rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 30px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem;">
+          🌸 Special Heritage &amp; Sovereign Identity Archive
+        </span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; color: #ffffff; margin-bottom: 1rem; line-height: 1.15;">
+          Jammu &amp; Kashmir
+        </h1>
+        <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(255,255,255,0.9); margin-bottom: 2rem; max-width: 760px; margin-left: auto; margin-right: auto; font-weight: 400;">
+          An authoritative regional analysis archive — preserving the eternal special status, historical covenants, living craft economies, and fragile Himalayan ecosystems of Jammu &amp; Kashmir.
+        </p>
+
+        <div style="display: flex; gap: 0.85rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../index.html#exam-prep-section" class="btn btn--primary" style="background: #b42a2c; color: #ffffff; font-weight: 800; border: 1px solid #D4AF37; padding: 0.75rem 1.5rem; border-radius: var(--radius-sm); text-decoration: none;">
+            📝 TAKE PRACTICE TEST &rarr;
+          </a>
+          <a href="history.html" class="btn btn--primary" style="background: var(--saffron); color: #121110; font-weight: 700; border: none; padding: 0.75rem 1.5rem; border-radius: var(--radius-sm); text-decoration: none;">
+            📜 History &amp; Identity
+          </a>
+          <a href="geography.html" class="btn btn--secondary" style="background: rgba(255,255,255,0.15); color: #ffffff; border: 1px solid rgba(255,255,255,0.4); padding: 0.75rem 1.5rem; border-radius: var(--radius-sm); text-decoration: none;">
+            🗺️ Geography &amp; Rivers
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING ALWAYS-VISIBLE TEST BUTTON -->
+    <a href="../index.html#exam-prep-section" style="position:fixed; bottom:24px; left:24px; z-index:9999; background:#9E2A2B; color:#FFF; border:2px solid #D4AF37; padding:12px 20px; font-weight:800; font-size:13px; letter-spacing:0.05em; border-radius:30px; box-shadow:0 6px 20px rgba(158,42,43,0.4); text-decoration:none; display:flex; align-items:center; gap:8px;">
+      <span>📝</span> TAKE PRACTICE TEST
+    </a>
+
+    <!-- Dynamic Regional Highlights Marquee (Refreshes with a new shuffle on every load) -->
+    <div class="dynamic-marquee-banner" role="marquee" aria-label="Dynamic Regional Highlights">
+      <div class="dynamic-marquee-track" id="dynamicMarqueeTrack">
+        <!-- Injected dynamically via JavaScript -->
+      </div>
+    </div>
+
+    <!-- Key Facts Bar -->
+    <section style="background: var(--white); border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem;">
+      <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+        <div>
+          <div style="font-size: 1.5rem; font-weight: 700; color: var(--navy); font-family: var(--font-heading);">42,241 km²</div>
+          <div style="font-size: var(--fs-sm); color: var(--text-muted);">Total Geographic Area</div>
+        </div>
+        <div>
+          <div style="font-size: 1.5rem; font-weight: 700; color: var(--navy); font-family: var(--font-heading);">20 Districts</div>
+          <div style="font-size: var(--fs-sm); color: var(--text-muted);">Jammu &amp; Kashmir Divisions</div>
+        </div>
+        <div>
+          <div style="font-size: 1.5rem; font-weight: 700; color: var(--navy); font-family: var(--font-heading);">Srinagar / Jammu</div>
+          <div style="font-size: var(--fs-sm); color: var(--text-muted);">Summer &amp; Winter Capitals</div>
+        </div>
+        <div>
+          <div style="font-size: 1.5rem; font-weight: 700; color: var(--navy); font-family: var(--font-heading);">Special Identity</div>
+          <div style="font-size: var(--fs-sm); color: var(--text-muted);">Unique Heritage &amp; Preference</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <div style="max-width: var(--container-max); margin: 3rem auto; padding: 0 1.5rem;">
+
+      <!-- ============================================================ -->
+      <!-- INTERACTIVE HERITAGE & PILGRIMAGE CIRCUIT PLANNER -->
+      <!-- ============================================================ -->
+      <section class="circuit-planner-box">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">🗺️ Travel &amp; Heritage Circuit Guide</span>
+        <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.6rem; margin: 0.2rem 0;">Jammu &amp; Kashmir Interactive Circuit Planner</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Explore curated travel itineraries across alpine valleys, sacred shrines, traditional artisan looms, and river basins.</p>
+
+        <div class="circuit-btn-group">
+          <button class="circuit-btn active" onclick="selectTravelCircuit('alpine', this)">🏔️ Alpine &amp; Valleys Circuit</button>
+          <button class="circuit-btn" onclick="selectTravelCircuit('pilgrimage', this)">🛕 Sacred Shrines Circuit</button>
+          <button class="circuit-btn" onclick="selectTravelCircuit('artisan', this)">🧶 Artisan &amp; Craft Guild Circuit</button>
+          <button class="circuit-btn" onclick="selectTravelCircuit('rivers', this)">🌊 Rivers &amp; Eco-Lakes Circuit</button>
+        </div>
+
+        <div id="circuitDisplayBox"></div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- INTERACTIVE 20-DISTRICT CUTE LOCAL FOOD EXPLORER -->
+      <!-- ============================================================ -->
+      <section class="food-explorer-box">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">🍲 Culinary Heritage &amp; District Delicacies</span>
+        <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.6rem; margin: 0.2rem 0;">Jammu &amp; Kashmir 20-District Iconic Local Food Showcase</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Discover cute, mouth-watering signature foods, street snacks, and royal feasts from every single district of Kashmir and Jammu!</p>
+
+        <div id="districtFoodContainer"></div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 20-DISTRICT WEATHER & DISASTER MONITOR SECTION -->
+      <!-- ============================================================ -->
+      <section id="district-weather-section" class="weather-section-wrapper">
+        <div class="weather-header-top">
+          <div class="weather-title-area">
+            <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">🌧️ IMD &amp; Disaster Control Monitoring</span>
+            <h3>Jammu &amp; Kashmir 20-District Weather &amp; Calamity Watch</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Real-time temperature, rainfall, river gauge levels, and disaster alerts across all 20 districts of J&amp;K.</p>
+          </div>
+
+          <div class="weather-div-tabs">
+            <button class="weather-div-btn active" onclick="setWeatherDivision('all', this)">🌐 All 20 Districts</button>
+            <button class="weather-div-btn" onclick="setWeatherDivision('kashmir', this)">🏔️ Kashmir Division (10)</button>
+            <button class="weather-div-btn" onclick="setWeatherDivision('jammu', this)">🏞️ Jammu Division (10)</button>
+          </div>
+        </div>
+
+        <div id="districtWeatherContainer" class="district-weather-grid">
+          <p style="color: var(--text-muted); padding: 1.5rem; text-align: center;">Loading 20-district weather &amp; river gauge status...</p>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- LATEST NEWS ABOUT JAMMU & KASHMIR SECTION -->
+      <!-- ============================================================ -->
+      <section id="latest-news-section" class="news-section-wrapper">
+        
+        <!-- Breaking News Marquee Ticker -->
+        <div class="news-ticker-bar" role="region" aria-label="Breaking Jammu & Kashmir News Ticker">
+          <div class="news-ticker-label">
+            <span>🚨</span> BREAKING NEWS
+          </div>
+          <div class="news-ticker-window">
+            <div class="news-ticker-track" id="newsMarqueeTrack">
+              <!-- Injected via js/news_loader.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- News Section Header -->
+        <div class="news-header-top">
+          <div class="news-title-area">
+            <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">📡 Daily Media Monitor &amp; Regional Bulletins</span>
+            <h2>Latest News about Jammu &amp; Kashmir</h2>
+            <p class="news-subtext">Verified updates collected daily from Press Information Bureau, regional media, and disaster advisories across Politics, Development, and Natural Calamities.</p>
+          </div>
+          <div class="news-sync-box">
+            <span class="news-last-updated" id="newsLastUpdated">Syncing Live Feed...</span>
+            <button class="btn-refresh-feed" id="btnRefreshNewsFeed" onclick="refreshLiveNewsFeed()">🔄 Refresh Feed</button>
+          </div>
+        </div>
+
+        <!-- Search & Category Filters -->
+        <div class="news-controls-bar">
+          <div class="news-search-box">
+            <span class="news-search-icon">🔎</span>
+            <input type="text" id="newsSearchInput" class="news-search-input" placeholder="Search news headlines, disasters, assembly bills, rail projects, landslides..." oninput="handleNewsSearch(this)">
+          </div>
+
+          <div class="news-filter-tabs">
+            <div class="tab-group">
+              <button class="news-filter-btn active" data-category="all" onclick="setNewsCategory('all', this)">
+                🌐 All Updates <span class="count-pill" id="count-badge-all">0</span>
+              </button>
+              <button class="news-filter-btn" data-category="politics" onclick="setNewsCategory('politics', this)">
+                🏛️ Politics &amp; Governance <span class="count-pill" id="count-badge-politics">0</span>
+              </button>
+              <button class="news-filter-btn" data-category="development" onclick="setNewsCategory('development', this)">
+                🏗️ Infrastructure &amp; Development <span class="count-pill" id="count-badge-development">0</span>
+              </button>
+              <button class="news-filter-btn" data-category="calamity" onclick="setNewsCategory('calamity', this)">
+                🌩️ Calamities &amp; Disasters <span class="count-pill" id="count-badge-calamity">0</span>
+              </button>
+              <button class="news-filter-btn" data-category="bookmarks" onclick="setNewsCategory('bookmarks', this)">
+                ⭐ Bookmarks <span class="count-pill" id="count-badge-bookmarks">0</span>
+              </button>
+            </div>
+
+            <div class="view-toggle-group">
+              <button class="btn-view-toggle active" id="btn-view-grid" onclick="toggleNewsViewMode('grid')">▦ Grid</button>
+              <button class="btn-view-toggle" id="btn-view-list" onclick="toggleNewsViewMode('list')">≡ List</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic News Grid Container -->
+        <div id="newsGridContainer" class="news-card-grid">
+          <p style="color: var(--text-muted); padding: 1.5rem; text-align: center;">Loading latest Jammu &amp; Kashmir news...</p>
+        </div>
+      </section>
+
+      <!-- Interactive News Detail Modal Overlay -->
+      <div id="newsDetailModal" class="news-modal-overlay" style="display: none;">
+        <div class="news-modal-container">
+          <div class="news-modal-header">
+            <button class="btn-modal-close" onclick="closeNewsModal()">&times;</button>
+            <h3 class="news-modal-title" id="modalNewsTitle">News Article Headline</h3>
+            <div class="news-modal-meta" id="modalNewsMeta"></div>
+          </div>
+          <div class="news-modal-body" id="modalNewsBody"></div>
+          <div class="news-modal-footer">
+            <span style="font-size: 0.8rem; color: #666;">Jammu &amp; Kashmir Verification Portal</span>
+            <a href="#" id="modalNewsSourceLink" target="_blank" rel="noopener" class="btn-modal-source">
+              🔗 Read Original Publisher Story &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive Region Analysis Database Section -->
+      <section style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); margin-bottom: 3rem;">
+        <div style="margin-bottom: 1.5rem;">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em;">🔍 Investigative Search</span>
+          <h2 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.8rem; margin: 0.25rem 0 0.5rem;">
+            Jammu &amp; Kashmir Region Analysis &amp; Resource Database
+          </h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+            Search over 60+ verified modules on river etymology, land revenue terms (Khasra, Girdawari), craft economics, and ecological watchdog reports.
+          </p>
+        </div>
+
+        <!-- Search Input -->
+        <div style="margin-bottom: 1.25rem;">
+          <input type="text" id="homeSearch" style="width: 100%; padding: 0.9rem 1.25rem; font-size: 1rem; border: 1px solid var(--gray-300); border-radius: var(--radius); outline: none; font-family: inherit;" placeholder="🔎 Search: Gulmarg, Khasra land record, Pashmina wage, Pampore saffron, Jhelum Vitasta..." oninput="executeSearch()">
+        </div>
+
+        <!-- Filter Tabs -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+          <button class="filter-btn active" data-filter="all" onclick="setFilter('all', this)" style="padding: 0.5rem 1rem; border: 1px solid var(--navy); background: var(--navy); color: #ffffff; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem; font-weight: 600;">🌐 All Records</button>
+          <button class="filter-btn" data-filter="linguistic" onclick="setFilter('linguistic', this)" style="padding: 0.5rem 1rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem; font-weight: 600;">📜 Geographic &amp; Roots</button>
+          <button class="filter-btn" data-filter="civic" onclick="setFilter('civic', this)" style="padding: 0.5rem 1rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem; font-weight: 600;">📋 Civic &amp; Land Records</button>
+          <button class="filter-btn" data-filter="artisan" onclick="setFilter('artisan', this)" style="padding: 0.5rem 1rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem; font-weight: 600;">🧶 Craft &amp; Economics</button>
+          <button class="filter-btn" data-filter="eco" onclick="setFilter('eco', this)" style="padding: 0.5rem 1rem; border: 1px solid var(--gray-300); background: var(--white); color: var(--text-body); border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem; font-weight: 600;">🌍 Eco Watchdog</button>
+        </div>
+
+        <!-- Search Results Container -->
+        <div id="homeSearchResults" style="display: flex; flex-direction: column; gap: 1.25rem;"></div>
+      </section>
+
+      <!-- Subject Explorer Portals -->
+      <section style="margin-bottom: 3rem;">
+        <div style="margin-bottom: 1.5rem; text-align: center;">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em;">Core Subjects</span>
+          <h2 style="font-family: var(--font-heading); color: var(--navy); font-size: 2rem; margin-top: 0.25rem;">Explore the Knowledge Portals</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+          
+          <a href="history.html" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.75rem; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; display: block;" onmouseover="this.style.borderColor='var(--navy)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">📜</div>
+            <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.3rem; margin-bottom: 0.5rem;">Dynastic &amp; Special History</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">Settlement origins, historic treaties, Kashmir Valley gazetteers, and Dogra records.</p>
+          </a>
+
+          <a href="geography.html" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.75rem; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; display: block;" onmouseover="this.style.borderColor='var(--navy)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">🏔️</div>
+            <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.3rem; margin-bottom: 0.5rem;">Physical Geography &amp; Valleys</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">Trans-Himalayan basins, Pir Panjal passes, Jhelum Vitasta drainage, and alpine lakes.</p>
+          </a>
+
+          <a href="politics.html" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.75rem; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; display: block;" onmouseover="this.style.borderColor='var(--navy)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">⚖️</div>
+            <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.3rem; margin-bottom: 0.5rem;">Governance &amp; Covenants</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">Instrument of Accession, historic Article 370 provisions, legal frameworks, and UT Acts.</p>
+          </a>
+
+          <a href="culture.html" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.75rem; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; display: block;" onmouseover="this.style.borderColor='var(--navy)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">🧶</div>
+            <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.3rem; margin-bottom: 0.5rem;">Cultural &amp; Craft Heritage</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">Pashmina weaving, Sozni needlework, Kani Talim scripts, Sufi literature, and Wazwan.</p>
+          </a>
+
+          <a href="economy.html" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.75rem; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; display: block;" onmouseover="this.style.borderColor='var(--navy)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">🚜</div>
+            <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.3rem; margin-bottom: 0.5rem;">Economy &amp; Agriculture</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">Pampore saffron farming, Kishtwar sapphires, willow bat trade, and handicrafts.</p>
+          </a>
+
+          <a href="resources.html" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.75rem; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; display: block;" onmouseover="this.style.borderColor='var(--navy)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">📚</div>
+            <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.3rem; margin-bottom: 0.5rem;">Primary Source Gazetteers</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">Archival census documents, imperial survey records, land revenue glossaries, and maps.</p>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Wikipedia Knowledge Integration Extract -->
+      <section style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); margin-bottom: 3rem;">
+        <div style="margin-bottom: 1.25rem;">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em;">Verified Encyclopedic Data</span>
+          <h2 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.6rem; margin-top: 0.25rem;">Regional Encyclopedic Overviews</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div>
+            <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.2rem; margin-bottom: 0.5rem;">Jammu and Kashmir (Union Territory) Overview</h3>
+            <div data-wiki="Jammu and Kashmir (union territory)">
+              <p style="color: var(--text-muted); font-style: italic;">Loading regional encyclopedic excerpt...</p>
+            </div>
+          </div>
+          <div style="border-top: 1px solid var(--border); padding-top: 1.5rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.2rem; margin-bottom: 0.5rem;">Dogra Dynasty &amp; State Formation</h3>
+            <div data-wiki="Dogra dynasty">
+              <p style="color: var(--text-muted); font-style: italic;">Loading historical extract...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Include -->
+  <div id="site-footer"></div>
+
+  <!-- Include Scripts -->
+  <script src="assets/js/include_loader.js"></script>
+
+  <!-- Dynamic Marquee Shuffling & Search Script -->
+  <script>
+    // Pool of authentic regional highlights to shuffle on every page visit/refresh
+    const marqueePool = [
+      { chip: "Special Status", text: "Instrument of Accession signed 26 October 1947 — preserving J&K's eternal sovereign identity & special preference." },
+      { chip: "Land Revenue", text: "J&K Land Revenue Glossary — Khasra Girdawari, Jamabandi, Patwari, Shajra Nasb & 14 archaic terms archived." },
+      { chip: "Pampore Saffron", text: "Category I high-altitude Crocus sativus harvest — 100% GI lab checked & direct-routed from Pampore fields." },
+      { chip: "Pashmina Weaving", text: "Master Wastas in Downtown Srinagar read 15th-century Kani Talim coded color-count loom scripts." },
+      { chip: "River Geography", text: "Jhelum (Vitasta) drainage basin — ancient Sanskrit, Persian & Dardic hydro-geography documented." },
+      { chip: "Gurez Valley", text: "High-altitude Himalayan border valley — home to the ancient Dard Shin community and Kishanganga river." },
+      { chip: "Kishtwar Sapphires", text: "Rare cornflower blue velvet sapphires from Paddar mines archived in the regional mineral registry." },
+      { chip: "Darbar Move", text: "149 Years of biannual capital migration (1872–2021) — the historical cultural bridge of J&K." },
+      { chip: "Dal Lake Hanji", text: "18 km² floating garden city at 1,730 m altitude cultivated by 50,000 native Hanji farming families." },
+      { chip: "Eco Watchdog", text: "Carrying capacity thresholds enforced at Pahalgam, Gulmarg & Sonamarg alpine lake ecosystems." },
+      { chip: "Dogra Culinary", text: "Traditional Dogra Kalari cheese ripening & culinary heritage of the Jammu Shivalik foothills." },
+      { chip: "Tilla Embroidery", text: "24-karat gold thread wire embroidery (Tilla Dozi) preserved by master artisans in Srinagar." },
+      { chip: "Primary Sources", text: "Villiers-Stuart colonial gazetteers and 19th-century imperial survey maps digitized." },
+      { chip: "Pir Panjal Passes", text: "High-altitude pass directory tracing historical Mughal Road & ancient trans-Himalayan trade corridors." },
+      { chip: "Sufi Rishi School", text: "Nund Rishi & Lal Ded oral poetry — the bedrock of Kashmir's syncretic Rishi cultural heritage." },
+      { chip: "Willow Bat Trade", text: "Anantnag & Sethar cricket bat industry — transforming indigenous white willow into global sports gear." }
+    ];
+
+    function initDynamicMarquee() {
+      const track = document.getElementById('dynamicMarqueeTrack');
+      if (!track) return;
+
+      // Fisher-Yates Random Shuffle so content is DIFFERENT every time the page opens/refreshes
+      const shuffled = [...marqueePool];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+
+      // Build HTML string
+      const itemsHtml = shuffled.map(item => `
+        <span>
+          <span class="marquee-chip">${item.chip}</span>
+          ${item.text}
+          <span class="marquee-sep">✦</span>
+        </span>
+      `).join('');
+
+      // Duplicate sequence for seamless 360-degree looping without empty gaps
+      track.innerHTML = itemsHtml + itemsHtml;
+    }
+
+    let masterDb = [];
+    let currentFilter = 'all';
+
+    async function loadMasterDatabase() {
+      try {
+        const response = await fetch('data/jk_master_database.json');
+        if (response.ok) {
+          masterDb = await response.json();
+          executeSearch();
+        }
+      } catch (e) {
+        console.error("Could not load master database", e);
+      }
+    }
+
+    function setFilter(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.style.background = 'var(--white)';
+        b.style.color = 'var(--text-body)';
+        b.style.borderColor = 'var(--gray-300)';
+      });
+      if (btn) {
+        btn.style.background = 'var(--navy)';
+        btn.style.color = '#ffffff';
+        btn.style.borderColor = 'var(--navy)';
+      }
+      currentFilter = category;
+      executeSearch();
+    }
+
+    function executeSearch() {
+      const query = (document.getElementById('homeSearch').value || '').toLowerCase().trim();
+      const resultsContainer = document.getElementById('homeSearchResults');
+      if (!resultsContainer) return;
+
+      resultsContainer.innerHTML = '';
+
+      let items = masterDb;
+
+      // Filter by Category if selected
+      if (currentFilter !== 'all') {
+        items = items.filter(item => {
+          const t = (item.type || '').toLowerCase();
+          if (currentFilter === 'linguistic') return /river|lake|tourist|spot|valley/i.test(t);
+          if (currentFilter === 'civic') return /civic|legal|revenue|land/i.test(t);
+          if (currentFilter === 'artisan') return /artisan|craft|economic|wage|saffron|pashmina/i.test(t);
+          if (currentFilter === 'eco') return /environmental|eco|carrying|capacity/i.test(t);
+          return true;
+        });
+      }
+
+      // Filter by Search Query if present
+      if (query) {
+        items = items.filter(item => {
+          const n = (item.name || '').toLowerCase();
+          const t = (item.type || '').toLowerCase();
+          const r = (item.region || '').toLowerCase();
+          const p = (item.root_or_price || '').toLowerCase();
+          const m = (item.meaning_or_cta || '').toLowerCase();
+          const d = (item.lore_or_desc || '').toLowerCase();
+          return n.includes(query) || t.includes(query) || r.includes(query) || p.includes(query) || m.includes(query) || d.includes(query);
+        });
+      }
+
+      if (items.length === 0) {
+        resultsContainer.innerHTML = `
+          <div style="background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center; color: var(--text-muted); font-style: italic;">
+            No regional analysis entries match your search query. Try searching for "Pashmina", "Khasra", "Gulmarg", or "Saffron".
+          </div>
+        `;
+        return;
+      }
+
+      // Render clean, bug-free, structured cards (Show top 15 when query is empty, or all when filtering/searching)
+      const renderList = (!query && currentFilter === 'all') ? items.slice(0, 15) : items;
+
+      renderList.forEach(item => {
+        const card = document.createElement('article');
+        card.style.background = 'var(--white)';
+        card.style.border = '1px solid var(--border)';
+        card.style.borderRadius = 'var(--radius-md)';
+        card.style.padding = '1.5rem';
+        card.style.boxShadow = 'var(--shadow-xs)';
+        card.style.transition = 'border-color 0.2s, box-shadow 0.2s';
+        
+        card.onmouseover = () => { card.style.borderColor = 'var(--navy)'; card.style.boxShadow = 'var(--shadow-md)'; };
+        card.onmouseout  = () => { card.style.borderColor = 'var(--border)'; card.style.boxShadow = 'var(--shadow-xs)'; };
+
+        card.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+            <div>
+              <span style="display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--navy); background: var(--gray-50); border: 1px solid var(--border); padding: 0.15rem 0.5rem; border-radius: var(--radius-sm); margin-bottom: 0.35rem;">
+                ${item.type || 'Regional Module'} • ${item.region || 'Jammu & Kashmir'}
+              </span>
+              <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.25rem; margin: 0;">
+                ${item.name}
+              </h3>
+            </div>
+            ${item.root_or_price ? `<div style="font-weight: 700; color: var(--gold); font-size: 0.95rem;">${item.root_or_price}</div>` : ''}
+          </div>
+
+          ${item.meaning_or_cta ? `
+            <p style="font-size: 0.9rem; color: var(--text-body); margin: 0.4rem 0; font-weight: 500;">
+              <strong>Key Context / Significance:</strong> ${item.meaning_or_cta}
+            </p>
+          ` : ''}
+
+          ${item.lore_or_desc ? `
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0.4rem 0; line-height: 1.6;">
+              ${item.lore_or_desc}
+            </p>
+          ` : ''}
+
+          ${item.dark_side_or_purity ? `
+            <div style="margin-top: 0.75rem; background: var(--gray-50); border-left: 3px solid var(--navy); padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.825rem; color: var(--text-body);">
+              <strong>Status &amp; Carrying Capacity Monitor:</strong> ${item.dark_side_or_purity}
+            </div>
+          ` : ''}
+        `;
+        resultsContainer.appendChild(card);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initDynamicMarquee();
+      loadMasterDatabase();
+    });
+  </script>
+</body>
+</html>

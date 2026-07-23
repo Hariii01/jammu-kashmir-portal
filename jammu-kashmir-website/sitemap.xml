@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://localhost:8000/index.html</loc></url>
+  <url><loc>http://localhost:8000/history.html</loc></url>
+  <url><loc>http://localhost:8000/geography.html</loc></url>
+  <url><loc>http://localhost:8000/politics.html</loc></url>
+  <url><loc>http://localhost:8000/stats.html</loc></url>
+  <url><loc>http://localhost:8000/about.html</loc></url>
+  <url><loc>http://localhost:8000/article_370.html</loc></url>
+  <url><loc>http://localhost:8000/political-analysis.html</loc></url>
+  <url><loc>http://localhost:8000/rajputana.html</loc></url>
+  <url><loc>http://localhost:8000/demographics.html</loc></url>
+  <url><loc>http://localhost:8000/economy.html</loc></url>
+  <url><loc>http://localhost:8000/culture.html</loc></url>
+  <url><loc>http://localhost:8000/administration.html</loc></url>
+  <url><loc>http://localhost:8000/gallery.html</loc></url>
+  <url><loc>http://localhost:8000/timeline.html</loc></url>
+  <url><loc>http://localhost:8000/resources.html</loc></url>
+</urlset>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latest News about Jammu &amp; Kashmir — Daily Politics, Development &amp; Calamity Watch</title>
+  <meta name="description" content="Daily aggregated news and official bulletins for Jammu &amp; Kashmir covering Legislative Assembly politics, infrastructure projects (USBRL, Zojila), and natural calamity alerts (floods, landslides, avalanches).">
+  
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="load_data.js" defer></script>
+  <script src="js/news_loader.js" defer></script>
+  <script src="js/interactive_widgets.js" defer></script>
+
+  <style>
+    .news-page-hero {
+      background: linear-gradient(135deg, #7c1522 0%, #3b2347 100%);
+      color: #ffffff;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .news-topic-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .topic-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .topic-card.card-pol { border-left: 5px solid #d96b1e; }
+    .topic-card.card-dev { border-left: 5px solid #2a6f54; }
+    .topic-card.card-cal { border-left: 5px solid #c0392b; }
+    .topic-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Include -->
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="news-page-hero">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <span style="display: inline-block; padding: 0.35rem 1rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 30px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;">
+          📡 Daily Media Monitor &amp; Regional Watchdog
+        </span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.15;">
+          Jammu &amp; Kashmir Daily News Center
+        </h1>
+        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); max-width: 750px; margin: 0 auto; font-weight: 400;">
+          Aggregated real-time coverage on Legislative Assembly politics, Union Territory administration decrees, high-speed rail &amp; tunnel development projects, and high-altitude natural calamity advisories.
+        </p>
+      </div>
+    </section>
+
+    <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 1.5rem;">
+      
+      <!-- Key Focus Pillars -->
+      <div class="news-topic-summary">
+        <div class="topic-card card-pol">
+          <div class="topic-title">
+            <span>🏛️ Politics &amp; Governance</span>
+            <span class="count-pill" id="count-badge-politics" style="background:#fdf0e6; color:#b85412;">0</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            Coverage of Legislative Assembly debates, statehood restoration resolutions, local body autonomy, cabinet decrees, and domicile employment laws.
+          </p>
+        </div>
+
+        <div class="topic-card card-dev">
+          <div class="topic-title">
+            <span>🏗️ Infrastructure &amp; Development</span>
+            <span class="count-pill" id="count-badge-development" style="background:#e8f5e9; color:#1b5e20;">0</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            Milestones across the Udhampur-Srinagar-Baramulla Rail Link (USBRL), Chenab Bridge, Zojila Tunnel, Srinagar Smart City, and Pampore Saffron exports.
+          </p>
+        </div>
+
+        <div class="topic-card card-cal">
+          <div class="topic-title">
+            <span>🌩️ Natural Calamities &amp; Alerts</span>
+            <span class="count-pill" id="count-badge-calamity" style="background:#fdeded; color:#b71c1c;">0</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            Flash flood warnings on Jhelum &amp; Tawi rivers, Jammu-Srinagar NH-44 landslide status, Pir Panjal avalanche advisories, and disaster response (JKSDMA).
+          </p>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- 20-DISTRICT WEATHER & DISASTER MONITOR SECTION -->
+      <!-- ============================================================ -->
+      <section id="district-weather-section" class="weather-section-wrapper">
+        <div class="weather-header-top">
+          <div class="weather-title-area">
+            <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">🌧️ IMD &amp; Disaster Control Monitoring</span>
+            <h3>Jammu &amp; Kashmir 20-District Weather &amp; Calamity Watch</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Real-time temperature, rainfall, river gauge levels, and disaster alerts across all 20 districts of J&amp;K.</p>
+          </div>
+
+          <div class="weather-div-tabs">
+            <button class="weather-div-btn active" onclick="setWeatherDivision('all', this)">🌐 All 20 Districts</button>
+            <button class="weather-div-btn" onclick="setWeatherDivision('kashmir', this)">🏔️ Kashmir Division (10)</button>
+            <button class="weather-div-btn" onclick="setWeatherDivision('jammu', this)">🏞️ Jammu Division (10)</button>
+          </div>
+        </div>
+
+        <div id="districtWeatherContainer" class="district-weather-grid">
+          <p style="color: var(--text-muted); padding: 1.5rem; text-align: center;">Loading 20-district weather &amp; river gauge status...</p>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- NH-44 HIGHWAY CORRIDOR TRACKER WIDGET -->
+      <!-- ============================================================ -->
+      <div id="nh44CorridorWidget"></div>
+
+      <!-- ============================================================ -->
+      <!-- KASHMIR SAFFRON & PASHMINA GI AUTHENTICATOR TOOL -->
+      <!-- ============================================================ -->
+      <section class="gi-auth-box">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">🏷️ Geographical Indication (GI) Verification</span>
+        <h4 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.5rem; margin: 0.2rem 0;">Kashmir Saffron &amp; Pashmina GI Certification Authenticator</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Verify official GI tag codes to authenticate Pampore Saffron potency grade or Kani/Sozni Pashmina loom origin.</p>
+
+        <div class="gi-auth-input-group">
+          <input type="text" id="giCodeInput" class="gi-auth-input" placeholder="Enter GI Code (e.g. SAF-PMP-8841, SAF-PMP-8842, PAS-KNI-1092, PAS-SZN-2041)">
+          <button class="btn-gi-verify" onclick="verifyGICode()">Verify Certificate &rarr;</button>
+        </div>
+
+        <div id="giResultBox"></div>
+      </section>
+
+      <!-- Main News Engine Section -->
+      <section id="latest-news-section" class="news-section-wrapper">
+        
+        <!-- Breaking News Marquee Ticker -->
+        <div class="news-ticker-bar" role="region" aria-label="Breaking Jammu & Kashmir News Ticker">
+          <div class="news-ticker-label">
+            <span>🚨</span> BREAKING NEWS
+          </div>
+          <div class="news-ticker-window">
+            <div class="news-ticker-track" id="newsMarqueeTrack">
+              <!-- Injected via js/news_loader.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- News Section Header -->
+        <div class="news-header-top">
+          <div class="news-title-area">
+            <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">📡 Verified Daily Feeds</span>
+            <h2>Latest Jammu &amp; Kashmir News Grid</h2>
+            <p class="news-subtext">Filter, search, or click any news card to open full details and primary source links.</p>
+          </div>
+          <div class="news-sync-box">
+            <span class="news-last-updated" id="newsLastUpdated">Syncing Live Feed...</span>
+            <button class="btn-refresh-feed" id="btnRefreshNewsFeed" onclick="refreshLiveNewsFeed()">🔄 Refresh Feed</button>
+          </div>
+        </div>
+
+        <!-- Search & Category Filters -->
+        <div class="news-controls-bar">
+          <div class="news-search-box">
+            <span class="news-search-icon">🔎</span>
+            <input type="text" id="newsSearchInput" class="news-search-input" placeholder="Search news headlines, disasters, assembly bills, rail projects, landslides..." oninput="handleNewsSearch(this)">
+          </div>
+
+          <div class="news-filter-tabs">
+            <div class="tab-group">
+              <button class="news-filter-btn active" data-category="all" onclick="setNewsCategory('all', this)">
+                🌐 All Updates <span class="count-pill" id="count-badge-all">0</span>
+              </button>
+              <button class="news-filter-btn" data-category="politics" onclick="setNewsCategory('politics', this)">
+                🏛️ Politics &amp; Governance
+              </button>
+              <button class="news-filter-btn" data-category="development" onclick="setNewsCategory('development', this)">
+                🏗️ Infrastructure &amp; Development
+              </button>
+              <button class="news-filter-btn" data-category="calamity" onclick="setNewsCategory('calamity', this)">
+                🌩️ Calamities &amp; Disasters
+              </button>
+              <button class="news-filter-btn" data-category="bookmarks" onclick="setNewsCategory('bookmarks', this)">
+                ⭐ Bookmarks <span class="count-pill" id="count-badge-bookmarks">0</span>
+              </button>
+            </div>
+
+            <div class="view-toggle-group">
+              <button class="btn-view-toggle active" id="btn-view-grid" onclick="toggleNewsViewMode('grid')">▦ Grid</button>
+              <button class="btn-view-toggle" id="btn-view-list" onclick="toggleNewsViewMode('list')">≡ List</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic News Grid Container -->
+        <div id="newsGridContainer" class="news-card-grid">
+          <p style="color: var(--text-muted); padding: 1.5rem; text-align: center;">Loading latest Jammu &amp; Kashmir news...</p>
+        </div>
+      </section>
+
+      <!-- Automated Daily Collection Guide -->
+      <section style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; margin-bottom: 3rem;">
+        <h3 style="font-family: var(--font-heading); color: var(--navy); margin-bottom: 0.75rem;">🤖 Daily Automated News Collection Mechanism</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+          This portal uses an automated Python script <code>news_fetcher.py</code> that runs daily to gather news from verified sources including Press Information Bureau (PIB), Google News RSS feeds for Jammu &amp; Kashmir, Greater Kashmir, and Daily Excelsior.
+        </p>
+        <div style="background: var(--gray-50); border-left: 3px solid var(--saffron); padding: 1rem; border-radius: 4px; font-family: monospace; font-size: 0.88rem; color: var(--gray-800);">
+          # Run the collector manually or via scheduled cron job:<br>
+          python news_fetcher.py
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Interactive News Detail Modal Overlay -->
+  <div id="newsDetailModal" class="news-modal-overlay" style="display: none;">
+    <div class="news-modal-container">
+      <div class="news-modal-header">
+        <button class="btn-modal-close" onclick="closeNewsModal()">&times;</button>
+        <h3 class="news-modal-title" id="modalNewsTitle">News Article Headline</h3>
+        <div class="news-modal-meta" id="modalNewsMeta"></div>
+      </div>
+      <div class="news-modal-body" id="modalNewsBody"></div>
+      <div class="news-modal-footer">
+        <span style="font-size: 0.8rem; color: #666;">Jammu &amp; Kashmir Verification Portal</span>
+        <a href="#" id="modalNewsSourceLink" target="_blank" rel="noopener" class="btn-modal-source">
+          🔗 Read Original Publisher Story &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vexillological &amp; Toponymic Wiki — Jammu &amp; Kashmir Portal</title>
+  <meta name="description" content="Searchable cultural and etymological database of rivers, lakes, and destinations in Jammu, Kashmir, and Ladakh.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="load_data.js" defer></script>
+  <script src="js/audio_pronounce.js" defer></script>
+  <script src="js/interactive_widgets.js" defer></script>
+  <style>
+    .search-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .search-input-wrap {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .search-input-wrap input {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      font-size: var(--fs-base);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: var(--off-white);
+      outline: none;
+      font-family: inherit;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .search-input-wrap input:focus {
+      border-color: var(--navy);
+      background: var(--white);
+    }
+    .filter-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .filter-pill {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--white);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      color: var(--gray-600);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s ease;
+    }
+    .filter-pill.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .wiki-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wiki-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .wiki-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 0.75rem;
+    }
+    .wiki-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0;
+    }
+    .tag-container {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .wiki-tag {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+    .tag-type { background: #eef2f7; color: #475569; }
+    .tag-region { background: #fffbeb; color: #b45309; }
+
+    .wiki-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+      background: var(--gray-50);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .meta-box h4 {
+      margin: 0 0 4px;
+      font-size: 11px;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .meta-box p {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gray-800);
+    }
+    .lore-section h4 {
+      margin: 0 0 6px;
+      font-size: 11px;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .lore-section p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--gray-700);
+    }
+    .no-results {
+      text-align: center;
+      padding: 3rem;
+      color: var(--gray-500);
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-bar__inner">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><span class="sep">›</span></li>
+        <li><a href="political-analysis.html">Analysis</a></li>
+        <li><span class="sep">›</span></li>
+        <li><span class="current">Etymology Wiki</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__badge">🗺️ Toponymic Dictionary</div>
+      <h1 class="page-hero__title">J&amp;K Toponymy &amp; Mythological Wiki</h1>
+      <p class="page-hero__subtitle">Searchable, ground-level toponymic database tracking the Sanskrit, Persian, Shina, Tibetan, and Dogri roots of J&amp;K features.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="page-layout">
+
+      <article class="page-content">
+
+        <!-- ============================================================ -->
+        <!-- KASHMIRI & DOGRI INTERACTIVE PHRASEBOOK TUTOR -->
+        <!-- ============================================================ -->
+        <section class="phrasebook-box">
+          <span style="font-size: 0.8rem; font-weight: 700; color: #921a28; text-transform: uppercase; letter-spacing: 0.08em;">🗣️ Audio Language Tutor</span>
+          <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.5rem; margin: 0.2rem 0;">Kashmiri &amp; Dogri Interactive Phrasebook</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Learn everyday spoken phrases for greetings, directions, saffron shopping, and dining with audio pronunciation support.</p>
+
+          <div id="phrasebookTutorContainer"></div>
+        </section>
+
+        <!-- Search Engine Box -->
+        <div class="search-section">
+          <div class="search-input-wrap">
+            <input type="text" id="wikiSearch" placeholder="Type a location (e.g. Gulmarg, Chenab, Pangong Tso, Katra)..." oninput="executeSearch()">
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+            <div class="filter-group">
+              <button class="filter-pill active" onclick="setFilter('all', this)">All</button>
+              <button class="filter-pill" onclick="setFilter('River', this)">Rivers</button>
+              <button class="filter-pill" onclick="setFilter('Lake', this)">Lakes</button>
+              <button class="filter-pill" onclick="setFilter('Tourist Spot', this)">Destinations</button>
+            </div>
+            <div style="font-size:var(--fs-xs);color:var(--gray-500);font-weight:600" id="resultsCount">Loading database...</div>
+          </div>
+        </div>
+
+        <!-- Render Container -->
+        <div class="cards-grid" id="cardsContainer"></div>
+
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="page-sidebar" aria-label="Toponymic Overview">
+        <div class="info-box" style="margin-bottom:1.5rem">
+          <div class="info-box__header">
+            <span class="info-box__icon">📚</span>
+            <span class="info-box__title">Linguistic Confluences</span>
+          </div>
+          <div class="info-box__body" style="padding:1rem;font-size:var(--fs-sm);color:var(--gray-600);line-height:1.6">
+            <p>This index provides etymological profiles of 40 rivers, lakes, and valley spots. The linguistic distribution reflects:</p>
+            <ul style="padding-left:1.2rem;margin-top:0.5rem;display:flex;flex-direction:column;gap:0.4rem">
+              <li><strong>Sanskrit / Vedic:</strong> Found in ancient river systems (e.g. Vitasta, Iravati).</li>
+              <li><strong>Persian &amp; Arabic:</strong> Introduced during Mughal and Sultanate periods (e.g. Gulmarg, Kausar Nag).</li>
+              <li><strong>Tibetan / Ladakhi:</strong> Defining Ladakh desert terrains (e.g. Pangong, Tso Moriri).</li>
+              <li><strong>Dardic / Shina / Yarkandi:</strong> Border passes and valleys (e.g. Drass, Gurez, Shyok).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="padding:1.5rem">
+          <h3 style="font-family:var(--font-heading);color:var(--navy);font-size:1rem;margin-bottom:0.75rem">Resource Links</h3>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <a href="geography.html" class="btn btn-sm btn-outline-navy" style="justify-content:flex-start">🗺️ Physical Geography</a>
+            <a href="history.html" class="btn btn-sm btn-outline-navy" style="justify-content:flex-start">📜 Historical Dynasties</a>
+            <a href="community_archive.html" class="btn btn-sm btn-accent" style="justify-content:flex-start">🌾 Community Archive →</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/include_loader.js"></script>
+  <script src="assets/js/search.js"></script>
+
+  <script>
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let wikiData = [];
+
+    async function initDictionary() {
+      try {
+        const prefix = location.port === '8080' ? '/static/' : '';
+        const response = await fetch(prefix + 'data/jk_master_database.json');
+        if (!response.ok) throw new Error("Could not load database");
+        wikiData = await response.json();
+        displayCards(wikiData);
+      } catch (e) {
+        console.error("Error loading database:", e);
+        document.getElementById('cardsContainer').innerHTML = 
+          `<div class="no-results">Error loading dictionary data. Ensure database is built.</div>`;
+      }
+    }
+
+    function displayCards(dataList) {
+      const container = document.getElementById('cardsContainer');
+      const countIndicator = document.getElementById('resultsCount');
+      container.innerHTML = '';
+
+      if (dataList.length === 0) {
+        countIndicator.textContent = "0 matches found";
+        container.innerHTML = `<div class="no-results">No locations match your search query. Try another term!</div>`;
+        return;
+      }
+
+      countIndicator.textContent = `Showing ${dataList.length} locations`;
+
+      dataList.forEach(item => {
+        const cardHtml = `
+          <div class="wiki-card">
+            <div class="wiki-card-header">
+              <h3 class="wiki-title">${item.name}</h3>
+              <div class="tag-container">
+                <span class="wiki-tag tag-type">${item.type}</span>
+                <span class="wiki-tag tag-region">${item.region}</span>
+              </div>
+            </div>
+            <div class="wiki-meta-grid">
+              <div class="meta-box">
+                <h4>Linguistic Root</h4>
+                <p>${item.root}</p>
+              </div>
+              <div class="meta-box">
+                <h4>Ancient / Vedic Name</h4>
+                <p>${item.ancient_name !== "N/A" ? item.ancient_name : "None"}</p>
+              </div>
+              <div class="meta-box" style="grid-column: span 2;">
+                <h4>Literal Meaning</h4>
+                <p style="color: var(--navy); font-size: 1.05rem;">"${item.meaning}"</p>
+              </div>
+            </div>
+            <div class="lore-section" style="margin-bottom: 1rem;">
+              <h4>Historical &amp; Mythological Lore</h4>
+              <p>${item.lore}</p>
+            </div>
+            <div class="lore-section" style="background: rgba(146, 26, 40, 0.05); padding: 0.8rem; border-left: 3px solid var(--navy); border-radius: 4px;">
+              <h4 style="color: var(--navy);">Ecological Status &amp; Carrying Capacity</h4>
+              <p style="font-size: 0.9rem; line-height: 1.5; color: var(--gray-700);">${item.dark_side}</p>
+            </div>
+          </div>
+        `;
+        container.innerHTML += cardHtml;
+      });
+    }
+
+    function executeSearch() {
+      searchQuery = document.getElementById('wikiSearch').value.toLowerCase().trim();
+      applyFilters();
+    }
+
+    function setFilter(filterType, element) {
+      document.querySelectorAll('.filter-pill').forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+      currentFilter = filterType;
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const filtered = wikiData.filter(item => {
+        const matchesFilter = (currentFilter === 'all' || item.type === currentFilter);
+        const matchesQuery = !searchQuery || 
+          item.name.toLowerCase().includes(searchQuery) ||
+          item.type.toLowerCase().includes(searchQuery) ||
+          item.region.toLowerCase().includes(searchQuery) ||
+          item.ancient_name.toLowerCase().includes(searchQuery) ||
+          item.meaning.toLowerCase().includes(searchQuery) ||
+          item.lore.toLowerCase().includes(searchQuery) ||
+          item.dark_side.toLowerCase().includes(searchQuery);
+        return matchesFilter && matchesQuery;
+      });
+      displayCards(filtered);
+    }
+
+    // Initial paint
+    document.addEventListener('DOMContentLoaded', () => {
+      initDictionary();
+    });
+  </script>
+</body>
+</html>

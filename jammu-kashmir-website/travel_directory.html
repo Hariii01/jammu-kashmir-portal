@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Master Travel Directory — Jammu &amp; Kashmir Portal</title>
+  <meta name="description" content="A comprehensive geographer's directory of natural aesthetics, viewpoints, and ecological instructions for J&amp;K.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .directory-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    .directory-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .directory-header {
+      border-bottom: 2px solid var(--saffron-light);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .directory-title {
+      font-family: var(--font-heading);
+      color: var(--navy);
+      font-size: 1.6rem;
+      margin: 0;
+    }
+    .badge-eco {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .eco-critical { background: rgba(146, 26, 40, 0.15); color: #921a28; }
+    .eco-extreme { background: rgba(217, 83, 79, 0.15); color: #d9534f; }
+    .eco-high { background: rgba(240, 173, 78, 0.15); color: #f0ad4e; }
+    .eco-moderate { background: rgba(92, 184, 92, 0.15); color: #5cb85c; }
+    .detail-section {
+      margin-bottom: 1.25rem;
+    }
+    .detail-section h4 {
+      margin: 0 0 6px;
+      font-size: 12px;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .detail-section p, .detail-section ul {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--gray-700);
+    }
+    .detail-section ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-bar__inner">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li><span class="sep">›</span></li>
+        <li><a href="political-analysis.html">Analysis</a></li>
+        <li><span class="sep">›</span></li>
+        <li><span class="current">Travel Directory</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__badge">⛰️ Master Guide</div>
+      <h1 class="page-hero__title">Scenic Landscapes Travel Directory</h1>
+      <p class="page-hero__subtitle">Vivid aesthetic highlights, prominent viewpoints, and ecological codes of conduct across Jammu &amp; Kashmir.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="page-layout--full" style="max-width:1000px;margin:0 auto;padding:3rem 1.5rem">
+
+      <!-- Filter Controls -->
+      <div style="display:flex;gap:0.5rem;margin-bottom:2.5rem;flex-wrap:wrap">
+        <button class="filter-pill active" onclick="filterDir('all', this)">All Regions</button>
+        <button class="filter-pill" onclick="filterDir('Kashmir', this)">Kashmir Valley</button>
+        <button class="filter-pill" onclick="filterDir('Jammu', this)">Jammu Province</button>
+      </div>
+
+      <div class="directory-grid" id="directoryList">
+
+        <!-- ==================== REGION 1: KASHMIR VALLEY ==================== -->
+
+        <!-- Gulmarg -->
+        <div class="directory-card" data-region="Kashmir">
+          <div class="directory-header">
+            <h3 class="directory-title">Gulmarg</h3>
+            <span class="badge-eco eco-critical">Eco Sensitivity: Critical</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Baramulla District (Kashmir Valley)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A massive, cup-shaped alpine basin situated at 8,825 feet in the Pir Panjal range. The landscape transitions from vibrant carpets of wild lupines, daisies, and forget-me-nots in summer to a deep, powdery snow sheet in winter. It is tightly framed by massive, towering ancient deodar and silver fir forests, backdropped by the jagged, ice-sheathed wall of the Apharwat Peak.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Apharwat Ridge (Phase 2 Station):</strong> Offers a raw, 360-degree high-altitude panorama of the Line of Control (LoC) mountains and the distant Nanga Parbat peak.</li>
+              <li><strong>Strawberry Valley:</strong> A quiet, rolling green meadow trail offering dramatic sunset shots through deep pine silhouettes.</li>
+              <li><strong>Khilanmarg:</strong> A high-altitude carpet meadow providing an expansive bird's-eye view of the entire valley basin below.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(146, 26, 40, 0.05);padding:1rem;border-radius:6px;border-left:3px solid var(--navy)">
+            <h4 style="color:var(--navy)">Ecological Instructions</h4>
+            <p><strong>CRITICAL.</strong> Gulmarg is heavily impacted by over-tourism, generating over 2,000 kg of solid waste daily during peak winter. Strict municipal bans protect its green meadows from new concrete hotel constructions. A vehicle capping policy forces tourists to walk, use electric ATVs, or ride horses within the main meadow bowl to curb carbon emissions near the fragile tree line.</p>
+          </div>
+        </div>
+
+        <!-- Pahalgam -->
+        <div class="directory-card" data-region="Kashmir">
+          <div class="directory-header">
+            <h3 class="directory-title">Pahalgam</h3>
+            <span class="badge-eco eco-high">Eco Sensitivity: High</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Anantnag District (Kashmir Valley)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>Positioned at the spectacular convergence of the roaring, crystal-clear Lidder River and the icy Sheshnag stream. The valley floor features vast, undulating grazing pastures enclosed by sheer, vertical mountain walls dense with blue pine and spruce. The river runs with a thundering, milky-white froth over massive volcanic boulders.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Betaab Valley:</strong> A pristine, picture-perfect meadow split down the middle by the meandering turquoise Lidder River, backdropped by jagged, snow-capped ridges.</li>
+              <li><strong>Aru Valley:</strong> A high-altitude, peaceful eco-village meadow serving as the starting trail for the Kolahoi Glacier trek.</li>
+              <li><strong>Baisaran Meadow:</strong> Often called "Mini Switzerland," this elevated, wide-open grassland is completely ringed by a dark, dense forest wall of ancient pines.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(240, 173, 78, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #f0ad4e">
+            <h4 style="color:#b45309">Ecological Instructions</h4>
+            <p><strong>HIGH.</strong> It acts as the critical base camp for the annual Amarnath Yatra pilgrimage, stoking intense environmental pressure on local water tables. The Lidder River basin is protected by strict anti-dumping laws, carrying a ₹2,000 spot fine for throwing plastic on its banks. Commercial construction is heavily regulated within 200 meters of the river to prevent catastrophic runoff.</p>
+          </div>
+        </div>
+
+        <!-- Sonamarg -->
+        <div class="directory-card" data-region="Kashmir">
+          <div class="directory-header">
+            <h3 class="directory-title">Sonamarg</h3>
+            <span class="badge-eco eco-critical">Eco Sensitivity: Critical</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Ganderbal District (Kashmir Valley)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>Known as the "Meadow of Gold," sitting at 9,200 feet along the banks of the roaring Sindh River. The landscape is defined by vast, high-alpine grasslands that bloom with yellow marsh marigolds in early spring. It is dramatically backdropped by dark, sharp craggy peaks wrapped in ancient hanging ice walls and massive pine glades.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Thajiwas Glacier Viewpoint:</strong> A spectacular viewing area of a rugged, multi-layered mountain glacier featuring frozen ice-caves and silver gushing waterfalls.</li>
+              <li><strong>Zoji La Pass Gate:</strong> A dramatic, windswept rock gateway offering raw, dusty views of the transitioning zone between green Kashmir and arid Ladakh.</li>
+              <li><strong>Nilagrad River Junction:</strong> A unique spot where a reddish, mineral-rich mountain stream cuts through a green meadow to join the main Sindh River.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(146, 26, 40, 0.05);padding:1rem;border-radius:6px;border-left:3px solid var(--navy)">
+            <h4 style="color:var(--navy)">Ecological Instructions</h4>
+            <p><strong>CRITICAL.</strong> The Thajiwas Glacier is rapidly receding due to high vehicular carbon emissions and heat generated by thousands of day-trippers. Commercial tourist vehicles are completely banned from driving past the main Sonamarg market town. Visitors must use authorized local electric vehicles, horses, or hike to reach the inner glacier valley.</p>
+          </div>
+        </div>
+
+        <!-- Gurez Valley -->
+        <div class="directory-card" data-region="Kashmir">
+          <div class="directory-header">
+            <h3 class="directory-title">Gurez Valley</h3>
+            <span class="badge-eco eco-extreme">Eco Sensitivity: Extremely Fragile</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Bandipora District (Kashmir Border Domain)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A raw, isolated border valley cut by the rushing, deep-turquoise Kishanganga River. The landscape is characterized by traditional, ancient wooden-log hamlets surrounded by fields of wild potatoes and purple iris. The valley is dominated by the monolithic, pyramid-like limestone face of the legendary Habba Khatoon peak.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Habba Khatoon Peak Base:</strong> The absolute best spot to witness the sunset, as the massive rock pyramid turns a deep, fiery amber orange.</li>
+              <li><strong>Dawar Fort Ridge:</strong> Provides an expansive, strategic view of the entire valley basin, the twisting river, and the border fences.</li>
+              <li><strong>Tulail Valley (Tulail Village):</strong> A remote, untouched sector further down the river featuring classic, tightly-packed wooden tier-architecture homes.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(217, 83, 79, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #d9534f">
+            <h4 style="color:#d9534f">Ecological Instructions</h4>
+            <p><strong>EXTREMELY FRAGILE.</strong> Gurez lacks structured plastic recycling centers and modern sewage processing networks. The local ecosystem is protected primarily by its deep isolation and strict military checkpoint gates. Local groups are pushing for a strict eco-homestay policy to block large-scale concrete hotel developments from destroying the valley's traditional heritage.</p>
+          </div>
+        </div>
+
+        <!-- Lolab Valley -->
+        <div class="directory-card" data-region="Kashmir">
+          <div class="directory-header">
+            <h3 class="directory-title">Lolab Valley</h3>
+            <span class="badge-eco eco-moderate">Eco Sensitivity: Moderate</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Kupwara District (Kashmir Valley)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A massive, serene, emerald-green oval-shaped valley basin. It features sprawling, flawlessly green rice paddies, deep fruit orchards (walnut, apple, cherry), and dense, completely untouched forests of deodar and pine that drape over the rolling hillsides.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Chandigam Meadows:</strong> A quiet, sweeping open grassland flanked by deep, dense pine woods, ideal for morning landscape photography.</li>
+              <li><strong>Kalaroos Caves Ridge:</strong> An ancient rock formation offering sweeping views across the wide, agricultural valley floor.</li>
+              <li><strong>Sogam Lake Plateau:</strong> A peaceful viewpoint overlooking a natural lake ringed by rolling, green orchard hills.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(92, 184, 92, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #5cb85c">
+            <h4 style="color:#2e7d32">Ecological Instructions</h4>
+            <p><strong>MODERATE.</strong> Lolab remains widely untouched by commercial mass tourism, preserving its pristine carrying capacity. It lacks large-scale trash management systems, meaning sudden influxes of day-trippers could rapidly trigger a plastic crisis in its pristine streams.</p>
+          </div>
+        </div>
+
+        <!-- Bangus Valley -->
+        <div class="directory-card" data-region="Kashmir">
+          <div class="directory-header">
+            <h3 class="directory-title">Bangus Valley</h3>
+            <span class="badge-eco eco-extreme">Eco Sensitivity: Extremely Fragile</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Kupwara District (Kashmir Valley)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A hidden, high-altitude alpine wetland and grassland complex sitting at 10,000 feet. Divided into Bodh Bangus (Big Bangus) and Lokut Bangus (Small Bangus), it features vast, rolling plains of soft velvet grass cut by hundreds of glassy, meandering cold-water streams, ringed by a thick, dark wall of old-growth coniferous forests.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Bodh Bangus Central Plain:</strong> Offers a completely unobstructed, infinite horizon view of green grasslands meeting the snow-flecked mountain peaks.</li>
+              <li><strong>Small Bangus Wetlands:</strong> A unique viewpoint showcasing slow-moving streams snaking through marshy pastures where wild horses roam.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(217, 83, 79, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #d9534f">
+            <h4 style="color:#d9534f">Ecological Instructions</h4>
+            <p><strong>EXTREMELY FRAGILE.</strong> Bangus has zero permanent concrete infrastructure, retaining an untouched wilderness status. Overnight camping is highly restricted, and plastic carrying rules are monitored at forest entry gates to ensure visitors pack out every single item they bring into the valley.</p>
+          </div>
+        </div>
+
+        <!-- Yusmarg -->
+        <div class="directory-card" data-region="Kashmir">
+          <div class="directory-header">
+            <h3 class="directory-title">Yusmarg</h3>
+            <span class="badge-eco eco-high">Eco Sensitivity: High</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Budgam District (Kashmir Valley)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>Sprawling, wave-like green meadows hidden deep in the northern slopes of the Pir Panjal range. It is bordered by dense forests of tall pine trees and dominated by the snow-capped mountain peaks of Sunset Peak and Tatukooti. The area features the Doodh Ganga, a roaring river that flows with white, milk-like foam over gray rocks.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Doodh Ganga Footbridge:</strong> Offers a dramatic close-up view of the rapid, foaming white river crashing through deep pine-wood gorges.</li>
+              <li><strong>Nilnag Lake Trail:</strong> A peaceful forest trail that leads to a deep, blue-green alpine lake enclosed by a dense canopy of pine trees.</li>
+              <li><strong>Sang-e-Safed Valley:</strong> A hidden, rocky meadow valley split by a glacial stream, offering a raw view of the high peaks.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(240, 173, 78, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #f0ad4e">
+            <h4 style="color:#b45309">Ecological Instructions</h4>
+            <p><strong>HIGH.</strong> The local administration enforces a strict plastic-free zone rule across the main meadow slopes. Heavy vehicular traffic is banned past the entry gates to preserve the fragile topsoil of the grazing meadows from erosion.</p>
+          </div>
+        </div>
+
+        <!-- Chatpal -->
+        <div class="directory-card" data-region="Kashmir">
+          <div class="directory-header">
+            <h3 class="directory-title">Chatpal</h3>
+            <span class="badge-eco eco-high">Eco Sensitivity: High</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Anantnag District (Kashmir Valley)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A completely off-grid, secluded mountain valley in South Kashmir. The landscape is defined by raw, steep mountain slopes carpeted in deep green grass, thick blankets of yellow wildflowers, and narrow, icy glacial streams that cut directly through local apple orchards.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Chinar Shade River Bank:</strong> A peaceful viewpoint along the riverbank where ancient Chinar trees frame the views of the rushing mountain waters.</li>
+              <li><strong>Forest Boundary Ridge:</strong> A steep walking trail that gives a panoramic look over the isolated valley and its tiny wood-and-stone homes.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(240, 173, 78, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #f0ad4e">
+            <h4 style="color:#b45309">Ecological Instructions</h4>
+            <p><strong>HIGH.</strong> Chatpal has zero commercial market spaces or hotels, keeping its waste output exceptionally low. To protect this off-grid valley, visitors are expected to bring zero single-use plastics, as there is no municipal garbage collection infrastructure in the area.</p>
+          </div>
+        </div>
+
+        <!-- ==================== REGION 2: JAMMU PROVINCE ==================== -->
+
+        <!-- Patnitop & Nathatop -->
+        <div class="directory-card" data-region="Jammu">
+          <div class="directory-header">
+            <h3 class="directory-title">Patnitop &amp; Nathatop</h3>
+            <span class="badge-eco eco-high">Eco Sensitivity: High</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Udhampur District (Jammu Province)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A beautiful hill station perched on a high plateau in the Shiwalik belt at 6,640 feet. It is characterized by dense, ancient forests of tall deodar trees, deep fog-filled valleys, and sweeping views of the deep Chenab River basin. Nathatop features windswept, barren mountain ridges that clear up to offer views of snow-covered peaks.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Nathatop Ridge:</strong> A high, clear paragliding takeoff point that offers an unobstructed view of the snow-clad Pir Panjal range during sunrise.</li>
+              <li><strong>Billoo Ki Powri:</strong> Steps cut directly into the rock face down into deodar-filled valleys.</li>
+              <li><strong>Sanctuary Trail:</strong> A shaded walking path through dense deodar forests, ideal for capturing morning sun rays filtering through the tall canopy.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(240, 173, 78, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #f0ad4e">
+            <h4 style="color:#b45309">Ecological Instructions</h4>
+            <p><strong>HIGH.</strong> Patnitop faces heavy commercial pressure, leading to localized water shortages during hot summer months. The local Patnitop Development Authority (PDA) strictly enforces a plastic-littering ban with spot fines and runs regular forest cleaning drives to protect the roots of the ancient deodar woods.</p>
+          </div>
+        </div>
+
+        <!-- Sanasar -->
+        <div class="directory-card" data-region="Jammu">
+          <div class="directory-header">
+            <h3 class="directory-title">Sanasar</h3>
+            <span class="badge-eco eco-moderate">Eco Sensitivity: Moderate</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Ramban District (Jammu Province)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A unique, cup-shaped alpine meadow surrounded by giant conifer trees, sitting at an altitude of 6,700 feet. The meadow features a small, calm lake at its center, rolling green fairways, and a peaceful forest perimeter that keeps the location hidden from the main highway.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Sanasar Lake Edge:</strong> A classic viewpoint reflecting the tall conifer trees in the still water during clear mornings.</li>
+              <li><strong>Shank Pal Ridge:</strong> A challenging trekking viewpoint that rewards hikers with a 360-degree view of the inner Jammu mountain ranges.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(92, 184, 92, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #5cb85c">
+            <h4 style="color:#2e7d32">Ecological Instructions</h4>
+            <p><strong>MODERATE.</strong> The natural lake faces threat of siltation and weed growth due to soil run-off from tourist foot traffic. Boating and plastic usage near the water's edge are regulated to protect the small lake's fragile aquatic life.</p>
+          </div>
+        </div>
+
+        <!-- Bhaderwah -->
+        <div class="directory-card" data-region="Jammu">
+          <div class="directory-header">
+            <h3 class="directory-title">Bhaderwah</h3>
+            <span class="badge-eco eco-high">Eco Sensitivity: High</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Doda District (Jammu Province)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A wide mountain valley carpeted with deep deodar forests, sparkling streams, and vast fields of purple lavender and medicinal herbs. Known as "Chota Kashmir," its terrain features a mix of rocky mountain passes and wide, green agricultural basins.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Padri Pass:</strong> A windy mountain pass at 9,900 feet covered in thick velvet grass in summer and deep blankets of snow in winter.</li>
+              <li><strong>Jai Valley:</strong> A miles-long green meadow where a slow, clear stream (Jai Nallah) snakes quietly through the valley floor.</li>
+              <li><strong>Guldanda:</strong> A high forest clearing on the Bhaderwah-Chamba road that offers views of deep valleys and dense conifer layers.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(240, 173, 78, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #f0ad4e">
+            <h4 style="color:#b45309">Ecological Instructions</h4>
+            <p><strong>HIGH.</strong> The rapid expansion of roads through the high passes has caused localized landslides and soil erosion. The local administration has declared the lavender fields and high meadows as eco-sensitive zones, restricting plastic waste disposal and unregulated commercial camping.</p>
+          </div>
+        </div>
+
+        <!-- Kishtwar National Park -->
+        <div class="directory-card" data-region="Jammu">
+          <div class="directory-header">
+            <h3 class="directory-title">Kishtwar National Park</h3>
+            <span class="badge-eco eco-extreme">Eco Sensitivity: Strictly Protected</span>
+          </div>
+          <p style="font-size:var(--fs-sm);color:var(--gray-500);margin-bottom:1.25rem"><strong>District:</strong> Kishtwar District (Jammu Province)</p>
+          
+          <div class="detail-section">
+            <h4>Aesthetic Highlights</h4>
+            <p>A raw, rugged wilderness defined by steep, rocky gorges, narrow alpine valleys, and massive hanging glaciers. The park features dense forests of blue pine, deodar, and oak, acting as a sanctuary for rare wildlife like the snow leopard and the Himalayan musk deer.</p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Key Prominent Viewpoints</h4>
+            <ul>
+              <li><strong>Kiyar Nallah Gorge:</strong> A viewpoint looking down a deep, vertical rock gorge split by a roaring glacial river.</li>
+              <li><strong>Marwah-Wadwan Valley View:</strong> A scenic, high-altitude vantage point looking out over the remote, isolated twin valleys inside the park.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section" style="background:rgba(217, 83, 79, 0.05);padding:1rem;border-radius:6px;border-left:3px solid #d9534f">
+            <h4 style="color:#d9534f">Ecological Instructions</h4>
+            <p><strong>STRICTLY PROTECTED.</strong> As a designated National Park, all commercial activities, plastic dumping, and unregulated vehicular entry are prohibited. Visitors must get forest department permits, and all trekking groups must follow strict "Leave No Trace" camping rules to protect the endangered mountain wildlife.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/include_loader.js"></script>
+  <script src="assets/js/search.js"></script>
+
+  <script>
+    function filterDir(region, btn) {
+      document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.directory-card');
+      cards.forEach(card => {
+        const reg = card.getAttribute('data-region');
+        if (region === 'all' || reg === region) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

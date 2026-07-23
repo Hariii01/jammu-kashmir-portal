@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#0a2342"/>
+  <!-- Saffron accent ring -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#e8601c" stroke-width="2"/>
+  <!-- Stylized mountains (Kashmir) -->
+  <polygon points="10,48 22,28 28,36 32,24 36,36 42,28 54,48" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Snow caps -->
+  <polygon points="29,28 32,20 35,28" fill="white" opacity="0.9"/>
+  <polygon points="20,32 23,25 26,32" fill="white" opacity="0.7"/>
+  <polygon points="38,32 41,25 44,32" fill="white" opacity="0.7"/>
+  <!-- J&K text -->
+  <text x="32" y="59" text-anchor="middle" font-family="serif" font-size="7" font-weight="bold" fill="#e8601c" letter-spacing="1">J&amp;K</text>
+</svg>
